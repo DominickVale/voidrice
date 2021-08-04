@@ -5,7 +5,7 @@
 	- vim/nvim (text editor)
 	- vscode (text editor/IDE)
 	- zsh (shell)
-	- ranger (file manager)
+	- lf-git (file manager)
 	- mpd/ncmpcpp/spotify (music)
 	- sxiv (image/gif viewer)
 	- mpv (video player)
