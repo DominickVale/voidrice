@@ -1,3 +1,4 @@
+set ratios 1:2:3
 # Luke's lf settings
 
 # Basic vars
@@ -105,3 +106,5 @@ map V push :!nvim<space>
 
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"
+set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/cleaner
