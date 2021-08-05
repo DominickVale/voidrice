@@ -44,7 +44,7 @@ alias \
 	xq="xbps-query" \
 	z="zathura" \
 	vfz='v $(fzf)' \
-	vrg='lf $(fzf)'
+	lfz='lf $(fzf)'
 
 alias \
 	magit="nvim -c MagitOnly" \
