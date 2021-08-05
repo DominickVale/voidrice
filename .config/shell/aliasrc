@@ -43,8 +43,10 @@ alias \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
 	z="zathura" \
-	vfz='v $(fzf)' \
-	lfz='lf $(fzf)'
+	f="fzf --height 40% --layout reverse --info inline --border \
+    		--preview 'file {}; highlight --out-format=ansi {}' --preview-window right,50%,border-vertical" \
+	vfz='v $(f)' \
+	lfz='lf $(f)'
 
 alias \
 	magit="nvim -c MagitOnly" \

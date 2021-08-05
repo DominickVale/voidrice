@@ -1,16 +1,29 @@
 #!/bin/sh
 # works on any init system
 # requirements: dmenu, xorg-setxkbmap
-kb="$(setxkbmap -query | grep -oP 'layout:\s*\K\w+')" || exit 1
 
-case $BLOCK_BUTTON in
-	1) kb_choice="$(awk '/! layout/{flag=1; next} /! variant/{flag=0} flag {print $2, "- " $1}' /usr/share/X11/xkb/rules/base.lst | dmenu -l 15)"
+DEFAULT_KB='us'
+LAST_KB_SEL_FILE='/tmp/last_kb_sel' # will contain the last successful selection (e.g it)
+
+last_kb="$(cat $LAST_KB_SEL_FILE || echo $DEFAULT_KB)"
+
+kb="$(setxkbmap -query | grep -oP 'layout:\s*\K\w+' || echo "$last_kb")" || exit 1
+
+select_kb(){
+	kb_choice="$(awk '/! layout/{flag=1; next} /! variant/{flag=0} flag {print $2, "- " $1}' /usr/share/X11/xkb/rules/base.lst | dmenu -l 15)"
 	kb="$(echo "$kb_choice" | awk '{print $3}')"
 	setxkbmap "$kb"
-	pkill -RTMIN+30 "${STATUSBAR:-dwmblocks}";;
+	pkill -RTMIN+30 "${STATUSBAR:-dwmblocks}"
+	if [ "$kb" ]; then echo "$kb" > $LAST_KB_SEL_FILE; fi
+}
+
+if [ -z "$BLOCK_BUTTON" -a $1 ]; then select_kb; fi
+
+case $BLOCK_BUTTON in
+	1) select_kb ;;
 	3) notify-send "⌨  Keyboard/language module" "$(printf "%s" "\- Current layout: $(setxkbmap -query | grep -oP 'layout:\s*\K\w+')")
 - Left click to change keyboard.";;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-echo "$kb"
+echo " $kb"
