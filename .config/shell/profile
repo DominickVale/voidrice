@@ -10,6 +10,9 @@ export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 
 unsetopt PROMPT_SP
 
+# General:
+export LC_TIME=en_US.utf8
+
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="st"
