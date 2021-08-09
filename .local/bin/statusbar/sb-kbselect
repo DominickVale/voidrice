@@ -26,4 +26,4 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-echo "^c#dddddd^ ^d^$(echo "$kb" | tr a-z A-Z)"
+echo "  $(echo "$kb" | tr a-z A-Z)"
