@@ -24,7 +24,7 @@ for battery in /sys/class/power_supply/BAT?*; do
 	case "$(cat "$battery/status")" in
 		"Full") status="⚡" ;;
 		"Discharging") status="🔋" ;;
-		"Charging") status="🔌" ;;
+		"Charging") status=" " ;;
 		"Not charging") status="🛑" ;;
 		"Unknown") status="♻️" ;;
 	esac
