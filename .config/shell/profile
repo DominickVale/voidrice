@@ -7,6 +7,8 @@
 
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+#adds ~/.scripts to $PATH
+export PATH="$PATH:${$(find ~/.scripts -type d -printf %p:)%%:}"
 
 unsetopt PROMPT_SP
 
