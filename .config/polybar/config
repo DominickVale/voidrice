@@ -27,11 +27,19 @@ foreground-alt = ${xrdb:color7}
 primary = ${xrdb:color4}
 alert = ${xrdb:color1}
 
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
 [bar/main]
 enable-ipc = true
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 20
+height = 18
 ;offset-x = 1%
 ;offset-y = -10%
 radius = 0
@@ -62,13 +70,11 @@ font-6 = font awesome 5 free brands regular::pixelsize=10;1
 
 modules-left = dwm
 modules-center = mpd
-modules-right = torrents weather filesystem backlight-acpi battery pulseaudio memory temperature cpu-usage nettraf date xkeyboard powermenu
-;modules-right = crypto torrents pacman-packages cpu-usage cpu-temperature memory volume weather time
+modules-right = torrents nettraf weather filesystem backlight-acpi battery memory temperature cpu-usage date pulseaudio xkeyboard powermenu
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
-
+tray-background = ${colors.background-alt}
 ;wm-restack = bspwm
 ;wm-restack = i3networkmanager_dmenu
 
@@ -80,9 +86,9 @@ override-redirect = false
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
-underline-size = 1
+underline-size = 2
 cursor-click = pointer
-cursor-scroll = ns-resize
+cursor-scroll = default
 
 [module/dwm]
 type = internal/dwm
@@ -175,11 +181,10 @@ label = %title:0:30:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
-
+format = %{A1:sb-kbselect dwm &:}<label-layout> <label-indicator>%{A}
 format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
-
 label-layout = %layout%
 label-layout-underline = ${colors.secondary}
 layout-icon-0 = it;🇮
@@ -196,7 +201,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = 💾%mountpoint% %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -307,7 +312,6 @@ time-alt = %H:%M:%S
 format-prefix = 📅
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
-
 label = %date% %time%
 
 [module/pulseaudio]
@@ -386,13 +390,12 @@ thermal-zone = 0
 warn-temperature = 80
 
 format = <ramp> <label>
-format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format-warn-underline = #ff0000
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = #ff0000
 
 ramp-0 = ❄️
 ramp-1 = 🌡️
@@ -427,14 +430,6 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
-
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
 
 [global/wm]
 margin-top = 0
