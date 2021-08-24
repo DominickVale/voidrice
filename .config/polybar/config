@@ -48,7 +48,7 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 0
 line-color = #f00
 
 border-size = 0
@@ -182,16 +182,13 @@ type = internal/xkeyboard
 format = %{A1:sb-kbselect dwm &:}<label-layout> <label-indicator>%{A}
 format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
 layout-icon-0 = it;🇮
 layout-icon-1 = us;🇺
 
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
@@ -266,7 +263,6 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
 label-connected = %essid%
 
 format-disconnected =
@@ -287,7 +283,6 @@ type = internal/network
 interface = enp4s0f2
 interval = 3.0
 
-format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -309,7 +304,6 @@ time-alt = %H:%M:%S
 
 format-prefix = 📅
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
 label = %date% %time%
 
 [module/pulseaudio]
@@ -350,14 +344,11 @@ adapter = AC0
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #55aa55
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = "%{F#ffbb0b} "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = ii
 ramp-capacity-1 = 
@@ -371,7 +362,6 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = ${self.format-charging-underline}
 animation-charging-framerate = 750
 
 animation-discharging-0 = 
@@ -389,7 +379,7 @@ warn-temperature = 80
 
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
-format-warn-underline = #ff0000
+format-warn-overline = #ff0000
 
 label = %temperature-c%
 label-warn = %temperature-c%
@@ -408,7 +398,7 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.alert}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
