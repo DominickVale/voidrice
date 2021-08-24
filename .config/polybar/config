@@ -156,7 +156,6 @@ label-focused-padding = 6
 ; unfocused = Unselected tag on unselected monitor
 label-unfocused = %name%
 label-unfocused-padding = 2
-label-unfocused-background =
 
 ; visible = Unselected tag, but occupied tag on any monitor
 label-visible = %name%
