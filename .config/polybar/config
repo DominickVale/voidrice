@@ -23,7 +23,7 @@ background = ${xrdb:background}
 background-wm = ${xrdb:color8}
 background-alt = ${xrdb:color0}
 foreground = ${xrdb:foreground}
-foreground-alt = ${xrdb:color7}
+foreground-alt = ${xrdb:color12}
 primary = ${xrdb:color4}
 alert = ${xrdb:color1}
 
@@ -70,7 +70,7 @@ font-6 = font awesome 5 free brands regular::pixelsize=10;1
 
 modules-left = dwm
 modules-center = mpd
-modules-right = torrents nettraf weather filesystem backlight-acpi battery memory temperature cpu-usage date pulseaudio xkeyboard powermenu
+modules-right = torrents nettraf weather backlight-acpi memory temperature battery pulseaudio date xkeyboard cpu-usage cpu-usage-bars powermenu
 
 tray-position = right
 tray-padding = 2
@@ -149,20 +149,19 @@ label-floating = F
 
 ; focused = Selected tag on focused monitor
 label-focused = %name%
-label-focused-background = ${colors.background-x}
-label-focused-underline= ${colors.background-alt}
-label-focused-padding = 3
+label-focused-foreground = #fff
+label-focused-background = ${colors.background-wm}
+label-focused-padding = 6
 
 ; unfocused = Unselected tag on unselected monitor
 label-unfocused = %name%
 label-unfocused-padding = 2
-label-unfocused-background = ${colors.background-alt}
+label-unfocused-background =
 
 ; visible = Unselected tag, but occupied tag on any monitor
 label-visible = %name%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
+label-visible-background = ${colors.background-alt}
+label-visible-padding = 3
 
 ; urgent = Unselected tag with window that has urgency hint set
 label-urgent = %name%
@@ -305,7 +304,7 @@ type = internal/date
 interval = 5
 
 date-alt =
-date = " %Y.%m.%d"
+date = " %D %a"
 time = %H:%M
 time-alt = %H:%M:%S
 
@@ -409,7 +408,7 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open = 
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
@@ -450,12 +449,19 @@ click-left = $TERMINAL -e htop &
 interval = 10
 format-prefix = "🧠 "
 
+[module/cpu-usage-bars]
+type = custom/script
+exec = sb-cpubars
+label = "%output%"
+click-left = $TERMINAL -e htop &
+interval = 1
+
 [module/cpu-usage]
 type = custom/script
 exec = sb-polycpu -d 0
 label = "%output%"
 click-left = $TERMINAL -e htop &
-interval = 10
+interval = 1
 format-prefix = "💻 "
 
 [module/weather]
