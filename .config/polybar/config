@@ -69,8 +69,8 @@ font-5 = font awesome 5 free solid:pixelsize=10;1
 font-6 = font awesome 5 free brands regular::pixelsize=10;1
 
 modules-left = dwm
-modules-center = mpd
-modules-right = torrents nettraf weather backlight-acpi memory temperature battery pulseaudio date xkeyboard cpu-usage cpu-usage-bars powermenu
+modules-right = torrents nettraf weather memory battery pulseaudio date xkeyboard temperature cpu-usage cpu-usage-bars powermenu
+;modules-right = torrents nettraf weather backlight-acpi memory temperature battery pulseaudio date xkeyboard cpu-usage cpu-usage-bars powermenu
 
 tray-position = right
 tray-padding = 2
@@ -386,7 +386,7 @@ label-warn = %temperature-c%
 label-warn-foreground = #ff0000
 
 ramp-0 = ❄️
-ramp-1 = 🌡️
+ramp-1 = 🌡️
 ramp-2 = 🔥
 ramp-foreground = ${colors.foreground-alt}
 
@@ -428,7 +428,7 @@ type = custom/script
 exec = echo 📥
 click-left = $TERMINAL -e tremc &
 click-right = sb-notifytorrents
-interval = 0
+interval = 1000
 
 [module/memory]
 type = custom/script
