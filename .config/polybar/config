@@ -58,9 +58,9 @@ padding-left = 0
 padding-right = 2
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = fixed:pixelsize=9;1
+font-0 = UbuntuMono:size=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=89;1
 font-3 = NotoColorEmoji:fontformat=truetype:scale=12:antialias=false;
@@ -69,12 +69,13 @@ font-5 = font awesome 5 free solid:pixelsize=10;1
 font-6 = font awesome 5 free brands regular::pixelsize=10;1
 
 modules-left = dwm
-modules-right = torrents nettraf weather memory battery pulseaudio date xkeyboard temperature cpu-usage cpu-usage-bars powermenu
+modules-right = torrents nettraf memory battery pulseaudio date xkeyboard temperature cpu-usage cpu-usage-bars
 ;modules-right = torrents nettraf weather backlight-acpi memory temperature battery pulseaudio date xkeyboard cpu-usage cpu-usage-bars powermenu
 
 tray-position = right
 tray-padding = 2
 tray-background = ${colors.background-alt}
+tray-scale = 1
 ;wm-restack = bspwm
 ;wm-restack = i3networkmanager_dmenu
 
@@ -125,7 +126,7 @@ secondary-layout-symbol = [M]
 ; Available tokens:
 ;   %title%
 label-title = %title%
-label-title-padding = 4
+label-title-padding = 0
 label-title-foreground = ${colors.primary}
 label-title-maxlen = 40
 
@@ -136,7 +137,7 @@ label-title-default = "Desktop"
 ; Available tokens:
 ;   %symbol%
 label-layout = %symbol%
-label-layout-padding = 2
+label-layout-padding = 1
 label-layout-foreground = #000
 label-layout-background = ${colors.primary}
 
@@ -151,16 +152,16 @@ label-floating = F
 label-focused = %name%
 label-focused-foreground = #fff
 label-focused-background = ${colors.background-wm}
-label-focused-padding = 6
+label-focused-padding = 2
 
 ; unfocused = Unselected tag on unselected monitor
 label-unfocused = %name%
-label-unfocused-padding = 2
+label-unfocused-padding = 0
 
 ; visible = Unselected tag, but occupied tag on any monitor
 label-visible = %name%
 label-visible-background = ${colors.background-alt}
-label-visible-padding = 3
+label-visible-padding = 1
 
 ; urgent = Unselected tag with window that has urgency hint set
 label-urgent = %name%
@@ -182,9 +183,11 @@ type = internal/xkeyboard
 format = %{A1:sb-kbselect dwm &:}<label-layout> <label-indicator>%{A}
 format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
-label-layout = %layout%
-layout-icon-0 = it;🇮
-layout-icon-1 = us;🇺
+label-layout = %icon%
+layout-icon-0 = it;󾓩
+layout-icon-1 = us;󾓦
+layout-icon-2 = pc_us_inet;󾓦
+layout-icon-3 = pc_it_inet;󾓩
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -309,8 +312,8 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <ramp-volume> <label-volume> <bar-volume>
-label-volume =  %percentage%%
+format-volume = <ramp-volume><label-volume>
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
