@@ -9,14 +9,24 @@ set scrolloff 10
 set icons
 set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
+set drawbox on
+set info 'size'
 
 # Vars that depend on environmental variables
 $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
 
 # cmds/functions
+cmd on-cd &{{
+    printf "\033]0; $(pwd | sed "s|$HOME|~|") - lf\007" > /dev/tty
+}}
+# also run at startup
+on-cd
+
+%[ $LF_LEVEL -eq 1 ] || echo -e "\e[1;31m Warning: You're in a nested lf instance!\e[0m"
+
 cmd open ${{
     case $(file --mime-type $f -b) in
-	image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
+	image/vnd.djvu|application/\033[5mpdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
         text/*) $EDITOR $fx;;
 	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
 	image/svg+xml) display -- $f ;;
@@ -71,8 +81,50 @@ cmd copyto ${{
 	notify-send "📋 File(s) copied." "File(s) copies to $dest."
 }}
 
+cmd bulk-rename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    [ -n "$fs" ] && fs="$(ls)"
+    printf '%s\n' "$fs" >"$old"
+    printf '%s\n' "$fs" >"$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
+}}
+
+cmd make_file ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+cmd chmod ${{
+  printf "Mode Bits: "
+  read ans
+
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+
+  lf -remote 'send reload'
+}}
+
 cmd setbg "$1"
-cmd bulkrename $vidir
+cmd bulkrename $printf '%s\n' $fx | vidir -
+cmd full_rename push re<c-u>
+cmd rename_at_beginning push re<c-a>
+cmd rename_after_extension push re<a-b>
+cmd rename_before_extension push re<a-b><a-b><a-f>
 
 # Bindings
 map <c-f> $lf -remote "send $id select '$(fzf)'"
@@ -92,13 +144,18 @@ map X !$f
 map o &mimeopen $f
 map O $mimeopen --ask $f
 
-map A rename # at the very end
-map c push A<c-u> # new rename
-map I push A<c-a> # at the very beginning
-map i push A<a-b><a-b><a-f> # before extention
-map a push A<a-b> # after extention
+map r
+map re rename # at the very end
+map rr full_rename # new rename
+map rb rename_at_beginning # at the very beginning
+map ri rename_before_extension # before extention
+map ra rename_after_extension # after extention
 map B bulkrename
 map b $setbg $f
+
+map m
+map mf make_file
+map mc chmod
 
 map <c-e> down
 map <c-y> up
