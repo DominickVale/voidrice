@@ -1,0 +1,3 @@
+#/bin/bash
+
+xdg-open "$({ find $HOME/{Backgrounds,Desktop,Documents,Downloads,GoogleDrive,nfs,projects,Videos,.submodules} -not -path '*/.insync-trash*/*'; find $HOME -maxdepth 1; } | grep -o '.\{90\}$' | rofi -dmenu -p find -i -theme ~/.config/rofi/finder.rasi)"
