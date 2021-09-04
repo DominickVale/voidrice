@@ -11,6 +11,7 @@ set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set drawbox on
 set info 'size'
+set dircounts on
 
 # Vars that depend on environmental variables
 $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
@@ -135,10 +136,9 @@ map D delete
 map E extract
 map C copyto
 map M moveto
-map <c-n> push :mkdir<space>
 map <c-r> reload
 map <c-s> set hidden!
-map <enter> shell
+map <enter> push :$st<space>&<enter>
 map x $$f
 map X !$f
 map o &mimeopen $f
@@ -156,6 +156,7 @@ map b $setbg $f
 map m
 map mf make_file
 map mc chmod
+map md push :mkdir<space>
 
 map <c-e> down
 map <c-y> up
