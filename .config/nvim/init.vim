@@ -7,9 +7,15 @@
 		autocmd VimEnter * PlugInstall
 	endif
 
+	" Conditional function helper
+	function! Cond(Cond, ...)
+	  let opts = get(a:000, 0, {})
+	  return a:Cond ? opts : extend(opts, { 'on': [], 'for': [] })
+	endfunction
+
 	call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 	Plug 'tpope/vim-surround'
-	Plug 'preservim/nerdtree'
+	Plug 'preservim/nerdtree', Cond(!exists('g:vscode'))
 	Plug 'junegunn/goyo.vim'
 	Plug 'jreybert/vimagit'
 	Plug 'lukesmithxyz/vimling'
@@ -17,6 +23,8 @@
 	Plug 'bling/vim-airline'
 	Plug 'tpope/vim-commentary'
 	Plug 'ap/vim-css-color'
+	Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+	Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 	call plug#end()
 
 	set title
@@ -48,6 +56,16 @@
 		map <leader>o :setlocal spell! spelllang=en_us<CR>
 	" Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 		set splitbelow splitright
+	" Easymotion
+		map <leader><leader>. <Plug>(easymotion-repeat)
+		map <leader><leader>f <Plug>(easymotion-bd-f)
+		map <leader><leader>j <Plug>(easymotion-bd-line)
+		map <leader><leader>k <Plug>(easymotion-bd-line)
+		map <leader><leader>w <Plug>(easymotion-bd-w)
+		map  / <Plug>(easymotion-sn)
+		omap / <Plug>(easymotion-tn)
+		map  n <Plug>(easymotion-next)
+		map  N <Plug>(easymotion-prev)
 
 	" Nerd tree
 		map <leader>n :NERDTreeToggle<CR>
