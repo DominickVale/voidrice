@@ -10,6 +10,13 @@ export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 #adds ~/.scripts to $PATH
 export PATH="$PATH:${$(find ~/.scripts -type d -printf %p:)%%:}"
 
+# Android studio
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 unsetopt PROMPT_SP
 
 # General:
@@ -18,6 +25,9 @@ export LC_TIME=en_US.utf8
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="st"
+export TERM_PROGRAM="st"
+export TERM="st"
+export REACT_TERMINAL="st"
 export BROWSER="vivaldi-stable"
 
 # ~/ Clean-up:
