@@ -1,8 +1,4 @@
 [Default Applications]
-
-# xdg-open will use these settings to determine how to open filetypes.
-# These .desktop entries can also be seen and changed in ~/.local/share/applications/
-
 text/x-shellscript=text.desktop;
 x-scheme-handler/magnet=torrent.desktop;
 application/x-bittorrent=torrent.desktop;
@@ -17,3 +13,22 @@ application/rss+xml=rss.desktop
 video/x-matroska=video.desktop
 x-scheme-handler/lbry=lbry.desktop
 inode/directory=file.desktop
+application/x-extension-htm=vivaldi-stable.desktop;
+application/x-extension-html=vivaldi-stable.desktop;
+application/x-extension-shtml=vivaldi-stable.desktop;
+application/x-extension-xht=vivaldi-stable.desktop;
+application/x-extension-xhtml=vivaldi-stable.desktop;
+application/x-tar=org.gnome.FileRoller.desktop;
+application/xhtml+xml=vivaldi-stable.desktop;
+application/zip=org.gnome.FileRoller.desktop;
+text/html=vivaldi-stable.desktop;
+x-scheme-handler/chrome=vivaldi-stable.desktop;
+x-scheme-handler/ftp=vivaldi-stable.desktop;
+x-scheme-handler/http=vivaldi-stable.desktop;
+x-scheme-handler/https=vivaldi-stable.desktop;
+application/jrd+json=vivaldi-stable.desktop
+application/json=vivaldi-stable.desktop
+
+[Added Associations]
+application/jrd+json=vivaldi-stable.desktop;
+application/json=vivaldi-stable.desktop;
