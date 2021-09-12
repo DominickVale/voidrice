@@ -1,0 +1,214 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Undo">
+      <i c="3" l="1631442626965" />
+    </e>
+    <e n="ActivateTerminalToolWindow">
+      <i c="1" l="1631443328977" />
+    </e>
+    <e n="AddToFavoritesPopup">
+      <i c="1" l="1631442202928" />
+    </e>
+    <e n="CodeCompletion">
+      <i c="2" l="1630862588328" />
+    </e>
+    <e n="CollapseRegion">
+      <i c="1" l="1630862464291" />
+    </e>
+    <e n="CreateDesktopEntry">
+      <i c="1" l="1630861481120" />
+    </e>
+    <e n="Debug">
+      <i c="8" l="1631444291936" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="96" l="1631443273995" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="1" l="1630862581403" />
+    </e>
+    <e n="EditorCompleteStatement">
+      <i c="1" l="1631437752679" />
+    </e>
+    <e n="EditorCopy">
+      <i c="1" l="1631437887475" />
+    </e>
+    <e n="EditorDelete">
+      <i c="2" l="1631437981730" />
+    </e>
+    <e n="EditorDeleteToWordStart">
+      <i c="4" l="1631443264699" />
+    </e>
+    <e n="EditorDown">
+      <i c="23" l="1630862593609" />
+    </e>
+    <e n="EditorEnter">
+      <i c="4" l="1631441853624" />
+    </e>
+    <e n="EditorEscape">
+      <i c="4" l="1631442761726" />
+    </e>
+    <e n="EditorRight">
+      <i c="1" l="1630862575317" />
+    </e>
+    <e n="EditorStartNewLineBefore">
+      <i c="2" l="1631437754668" />
+    </e>
+    <e n="EditorTab">
+      <i c="7" l="1631442624941" />
+    </e>
+    <e n="EditorUnindentSelection">
+      <i c="10" l="1631442619674" />
+    </e>
+    <e n="EditorUp">
+      <i c="8" l="1631436671633" />
+    </e>
+    <e n="ExpandRegion">
+      <i c="1" l="1630862466139" />
+    </e>
+    <e n="FileChooser.ShowHiddens">
+      <i c="1" l="1630861506624" />
+    </e>
+    <e n="Find">
+      <i c="2" l="1631442205047" />
+    </e>
+    <e n="FindUsages">
+      <i c="1" l="1630862173726" />
+    </e>
+    <e n="Git.Log.Branches.Change.Branch.Filter">
+      <i c="1" l="1631435927255" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="2" l="1631436685879" />
+    </e>
+    <e n="JumpToLastWindow">
+      <i c="1" l="1630862165717" />
+    </e>
+    <e n="Pause">
+      <i c="1" l="1631444279845" />
+    </e>
+    <e n="RecentChangedFiles">
+      <i c="1" l="1631443401621" />
+    </e>
+    <e n="RecentFiles">
+      <i c="1" l="1631443368263" />
+    </e>
+    <e n="Resume">
+      <i c="2" l="1631444321106" />
+    </e>
+    <e n="SaveAll">
+      <i c="2" l="1631441863240" />
+    </e>
+    <e n="SearchEverywhere">
+      <i c="1" l="1631438234525" />
+    </e>
+    <e n="ShowExecutionPoint">
+      <i c="2" l="1631444106251" />
+    </e>
+    <e n="ShowIntentionActions">
+      <i c="3" l="1631437113602" />
+    </e>
+    <e n="ShowSettings">
+      <i c="14" l="1631444156760" />
+    </e>
+    <e n="Stop">
+      <i c="3" l="1631444270450" />
+    </e>
+    <e n="ToggleLineBreakpoint">
+      <i c="5" l="1631444062710" />
+    </e>
+    <e n="WelcomeScreen.OpenDirectoryProject">
+      <i c="1" l="1630861488868" />
+    </e>
+    <e n="com.intellij.application.options.schemes.AbstractSchemesPanel$ShowSchemesActionsListAction">
+      <i c="2" l="1631443204892" />
+    </e>
+    <e n="com.intellij.codeInsight.actions.ReaderModeActionProvider$ReaderModeAction">
+      <i c="2" l="1631436702885" />
+    </e>
+    <e n="com.intellij.codeInsight.daemon.impl.ConfigureInspectionsAction">
+      <i c="1" l="1631441995112" />
+    </e>
+    <e n="com.intellij.execution.actions.RunConfigurationsComboBoxAction$SelectTargetAction">
+      <i c="1" l="1631444002805" />
+    </e>
+    <e n="com.intellij.execution.impl.DefaultExecutorGroup$ExecutorGroupWrapper$HideDisabledActionWrapper">
+      <i c="1" l="1631443931548" />
+    </e>
+    <e n="com.intellij.find.SearchReplaceComponent$11">
+      <i c="2" l="1631442205918" />
+    </e>
+    <e n="com.intellij.ide.ReopenProjectAction">
+      <i c="2" l="1631043494205" />
+    </e>
+    <e n="com.intellij.ide.plugins.PluginManagerMain$2">
+      <i c="1" l="1630861922899" />
+    </e>
+    <e n="com.intellij.ide.plugins.newui.TabbedPaneHeaderComponent$3">
+      <i c="2" l="1631437584603" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="1" l="1630861678917" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+      <i c="220" l="1631444471022" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.EditorMarkupModelImpl$StatusAction">
+      <i c="6" l="1631442018676" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.InspectionPopupManager$MenuAction">
+      <i c="1" l="1631441992286" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.TextEditorWithPreview$ChangeViewModeAction">
+      <i c="3" l="1630862069916" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="8" l="1631443373056" />
+    </e>
+    <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$AddKeyboardShortcutAction">
+      <i c="3" l="1631444229451" />
+    </e>
+    <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$RemoveShortcutAction">
+      <i c="1" l="1631444221167" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="1" l="1631438249065" />
+    </e>
+    <e n="com.intellij.openapi.project.LightEditActionFactory$SimpleLightEditCompatibleAction">
+      <i c="1" l="1631443407539" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$4">
+      <i c="7" l="1631442915282" />
+    </e>
+    <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
+      <i c="1" l="1631438004660" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.ToolWindowHeader$HideAction">
+      <i c="7" l="1631444333139" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$3">
+      <i c="1" l="1630861473792" />
+    </e>
+    <e n="com.intellij.xdebugger.impl.breakpoints.RemoveBreakpointGutterIconAction">
+      <i c="4" l="1631444128715" />
+    </e>
+    <e n="com.maddyhome.idea.vim.group.NotificationService$OpenIdeaVimRcAction">
+      <i c="1" l="1631439873051" />
+    </e>
+    <e n="com.maddyhome.idea.vim.group.NotificationService$notifyAboutShortcutConflict$2">
+      <i c="4" l="1631438174565" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ShortcutConflictsSettings">
+      <i c="1" l="1631439883276" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ex.ExShortcutKeyAction">
+      <i c="23" l="1631444042579" />
+    </e>
+    <e n="editRunConfigurations">
+      <i c="2" l="1631444005696" />
+    </e>
+    <e n="git4idea.ui.branch.GitBranchPopupActions$LocalBranchActions$CheckoutAction">
+      <i c="2" l="1631435977513" />
+    </e>
+  </component>
+</application>

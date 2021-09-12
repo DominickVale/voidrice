@@ -1,0 +1,18 @@
+<application>
+  <component name="ShownTips">
+    <option name="shownTips">
+      <map>
+        <entry key="CamelPrefixesInNavigationPopups.html" value="1631435727304" />
+        <entry key="ChangeSignature.html" value="1631435441023" />
+        <entry key="CodeCompletionNoShift.html" value="1631435715359" />
+        <entry key="CompareEditorWithClipboard.html" value="1631435731804" />
+        <entry key="CtrlD.html" value="1631435723197" />
+        <entry key="DBMakeDataSourceReadonly.html" value="1631435705025" />
+        <entry key="ExtractTypedef.html" value="1631435697965" />
+        <entry key="FindInPath.html" value="1630862041739" />
+        <entry key="InlineVariable.html" value="1631043530805" />
+        <entry key="VcsQuickList.html" value="1631435691694" />
+      </map>
+    </option>
+  </component>
+</application>

@@ -1,0 +1,168 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-search>
+        <entry encoding="base64">dGFncw==</entry>
+        <entry encoding="base64">c2NyYXRjaHBhZHM=</entry>
+        <entry encoding="base64">bnVsbFxj</entry>
+        <entry encoding="base64">WEtfc2xhc2g=</entry>
+        <entry encoding="base64">WEs=</entry>
+        <entry encoding="base64">XDx5YWpsX3ZhbFw+</entry>
+        <entry encoding="base64">dGl0bGVfY2hhbmdl</entry>
+        <entry encoding="base64">eWFqbF92YXI=</entry>
+        <entry encoding="base64">eWFqbF92YWw=</entry>
+        <entry encoding="base64">eWFqbA==</entry>
+        <entry encoding="base64">dXBkYXRlX3RpdGxl</entry>
+        <entry encoding="base64">dGl0bGVfdXBkYXRl</entry>
+        <entry encoding="base64">dGl0bGU=</entry>
+      </history-search>
+      <history-cmd>
+        <entry encoding="base64">dw==</entry>
+        <entry encoding="base64">c2V0bG9jYWwgc3BlbGwhIHNwZWxsbGFuZz1lbl91cw==</entry>
+        <entry encoding="base64">JXMveWFqbF92YXIvL2c=</entry>
+        <entry encoding="base64">JXMveWFqbF92YWwvL2c=</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <filemarks>
+      <file name="/GDB" timestamp="1631444275305">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/.local/src/dwm/.gitignore" timestamp="1631441860762">
+        <mark key="[" line="12" column="6" />
+        <mark key="]" line="13" column="17" />
+        <mark key="^" line="13" column="17" />
+        <mark key="." line="13" column="16" />
+      </file>
+      <file name="$USER_HOME$/.local/src/dwm/dwm.c" timestamp="1631438759393">
+        <mark key="'" line="2191" column="12" />
+        <mark key="[" line="101" column="0" />
+        <mark key="]" line="101" column="0" />
+        <mark key="." line="101" column="0" />
+      </file>
+      <file name="$USER_HOME$/.local/src/dwm/ipc.c" timestamp="1631444065162">
+        <mark key="'" line="533" column="20" />
+        <mark key="[" line="508" column="3" />
+        <mark key="]" line="508" column="3" />
+        <mark key="^" line="492" column="59" />
+        <mark key="." line="508" column="3" />
+      </file>
+      <file name="/oc-debug-editor-when-no-source-position-available.txt" timestamp="1631444280204">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/.local/src/dwm/start_xephyr.sh" timestamp="1631438007728">
+        <mark key="[" line="1" column="20" />
+        <mark key="]" line="7" column="0" />
+        <mark key="^" line="7" column="0" />
+        <mark key="." line="7" column="0" />
+      </file>
+      <file name="$USER_HOME$/.local/src/dwm/config.h" timestamp="1631437079270">
+        <mark key="'" line="258" column="24" />
+        <mark key="[" line="247" column="21" />
+        <mark key="]" line="247" column="22" />
+        <mark key="^" line="247" column="22" />
+        <mark key="." line="247" column="21" />
+      </file>
+      <file name="$USER_HOME$/.local/src/dwm/dwm.c_CLION_FRAGMENT_SEPARATOR_fragment.c" timestamp="1631444280923">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="/" timestamp="1631437717596">
+        <mark key="[" line="0" column="0" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="67" column="30" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="63" column="19" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="70" column="55" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="59" column="19" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="55" column="10" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="76" column="25" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="77" column="37" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="78" column="37" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="2191" column="12" filename="$USER_HOME$/.local/src/dwm/dwm.c" />
+      <jump line="251" column="28" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="253" column="24" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="254" column="28" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="255" column="24" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="256" column="28" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="265" column="24" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="264" column="24" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="262" column="24" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="261" column="28" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="260" column="24" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="259" column="28" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="258" column="24" filename="$USER_HOME$/.local/src/dwm/config.h" />
+      <jump line="328" column="3" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="344" column="2" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="302" column="16" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="472" column="4" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="1070" column="15" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="471" column="41" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="7" column="0" filename="$USER_HOME$/.local/src/dwm/start_xephyr.sh" />
+      <jump line="34" column="20" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="41" column="15" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="43" column="20" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="21" column="11" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="16" column="12" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="481" column="49" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="507" column="0" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="508" column="3" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="492" column="56" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="493" column="0" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="510" column="13" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="506" column="4" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="570" column="47" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="678" column="2" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="663" column="2" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="649" column="2" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="576" column="2" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="567" column="2" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+      <jump line="533" column="20" filename="$USER_HOME$/.local/src/dwm/ipc.c" />
+    </jumps>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="1" type="2">
+        <text encoding="base64">dHlwZWRlZiBzdHJ1Y3Qgewo=</text>
+      </register>
+      <register name="&quot;" type="4">
+        <text encoding="base64">Zg==</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgc2VsbW9uLT4K</text>
+      </register>
+      <register name="3" type="2">
+        <text encoding="base64">ICAgIHNwYXJnLgo=</text>
+      </register>
+      <register name=":" type="4">
+        <text encoding="base64">JXMveWFqbF92YWwvL2c=</text>
+      </register>
+      <register name="+" type="4">
+        <text encoding="base64">Zg==</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">Zg==</text>
+      </register>
+      <register name="." type="4">
+        <text encoding="base64">dGU=</text>
+      </register>
+      <register name="/" type="4">
+        <text encoding="base64">dGl0bGU=</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-search encoding="base64">dGl0bGU=</last-search>
+      <last-substitute encoding="base64">eWFqbF92YWw=</last-substitute>
+      <last-replace encoding="base64" />
+      <last-pattern encoding="base64">dGl0bGU=</last-pattern>
+      <last-dir encoding="base64">MQ==</last-dir>
+      <show-last encoding="base64">ZmFsc2U=</show-last>
+    </search>
+  </component>
+</application>

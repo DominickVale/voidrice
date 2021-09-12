@@ -1,0 +1,217 @@
+<project version="4">
+  <component name="DatabaseView">
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ipc.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19422">
+              <caret line="1079" column="14" selection-start-line="1079" selection-start-column="14" selection-end-line="1079" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dwm.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/start_xephyr.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/config.h" />
+      <option value="$PROJECT_DIR$/ipc.c" />
+      <option value="$PROJECT_DIR$/start_xephyr.sh" />
+      <option value="$PROJECT_DIR$/dwm.c" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dwm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dwm" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3929000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09576923" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Pull Requests" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.21339779" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Problems View" order="6" visible="true" weight="0.20511049" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="7" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="clangd" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="13" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.2230663" />
+      <window_info anchor="bottom" id="Python Packages" order="15" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.32941988" />
+      <window_info anchor="bottom" id="Flow" order="17" />
+      <window_info anchor="bottom" id="Services" order="18" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="make" order="1" side_tool="true" />
+    </layout>
+    <recentWindows>
+      <value>Problems View</value>
+      <value>Project</value>
+      <value>Debug</value>
+      <value>Messages</value>
+    </recentWindows>
+  </component>
+  <component name="Trusted.Project.Settings" hasCheckedIfOldProject="true" trusted="YES" />
+  <component name="WindowStateProjectService">
+    <state x="275" y="34" width="800" height="682" key="#Plugins" timestamp="1631440370124">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="34" width="800" height="682" key="#Plugins/0.0.1366.768@0.0.1366.768" timestamp="1631440370124" />
+    <state x="468" y="178" key="FileChooserDialogImpl" timestamp="1631436261630">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="468" y="178" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1631436261630" />
+    <state width="1258" height="126" key="GridCell.Tab.0.bottom" timestamp="1631440210355">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1258" height="126" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1631440210355" />
+    <state width="1258" height="126" key="GridCell.Tab.0.center" timestamp="1631440210336">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1258" height="126" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1631440210336" />
+    <state width="1258" height="126" key="GridCell.Tab.0.left" timestamp="1631440210333">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1258" height="126" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1631440210333" />
+    <state width="1258" height="126" key="GridCell.Tab.0.right" timestamp="1631440210352">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1258" height="126" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1631440210352" />
+    <state width="1258" height="126" key="GridCell.Tab.1.bottom" timestamp="1631440210361">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1258" height="126" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1631440210361" />
+    <state width="1258" height="126" key="GridCell.Tab.1.center" timestamp="1631440210358">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1258" height="126" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1631440210358" />
+    <state width="1258" height="126" key="GridCell.Tab.1.left" timestamp="1631440210357">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1258" height="126" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1631440210357" />
+    <state width="1258" height="126" key="GridCell.Tab.1.right" timestamp="1631440210360">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1258" height="126" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1631440210360" />
+    <state x="103" y="18" width="986" height="700" key="SettingsEditor" timestamp="1631439885508">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="103" y="18" width="986" height="700" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1631439885508" />
+    <state x="164" y="339" width="964" height="162" key="makefile.clean.confirm.dialog" timestamp="1631436183978">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="164" y="339" width="964" height="162" key="makefile.clean.confirm.dialog/0.0.1366.768@0.0.1366.768" timestamp="1631436183978" />
+    <state x="343" y="82" width="672" height="685" key="search.everywhere.popup" timestamp="1631438249348">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="343" y="82" width="672" height="685" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1631438249348" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file:///usr/include/X11/keysymdef.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="702" column="66" lean-forward="true" selection-start-line="702" selection-start-column="66" selection-end-line="702" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="257" lean-forward="true" selection-start-line="257" selection-end-line="257" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.ideavimrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ipc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19422">
+          <caret line="1079" column="14" selection-start-line="1079" selection-start-column="14" selection-end-line="1079" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start_xephyr.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dwm.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

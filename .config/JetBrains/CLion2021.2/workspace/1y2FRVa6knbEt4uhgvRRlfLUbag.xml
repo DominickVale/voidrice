@@ -1,0 +1,201 @@
+<project version="4">
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ipc.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="1072" selection-start-line="1072" selection-end-line="1072" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dwm.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="1736" column="23" selection-start-line="1736" selection-start-column="23" selection-end-line="1736" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/.gitignore" />
+      <option value="$PROJECT_DIR$/ipc.c" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dwm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dwm" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="mySelectedTabIndex" value="-1" />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3786000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1577206" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Pull Requests" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.49960256" side_tool="true" weight="0.39986187" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.50039744" weight="0.3891129" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Messages" order="5" sideWeight="0.50039744" weight="0.32997313" />
+      <window_info anchor="bottom" id="Problems View" order="6" weight="0.25759667" />
+      <window_info anchor="bottom" id="Python Packages" order="7" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="8" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32941988" />
+      <window_info anchor="bottom" id="clangd" order="12" />
+      <window_info anchor="bottom" id="CMake" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="15" />
+      <window_info anchor="bottom" id="Flow" order="16" />
+      <window_info anchor="bottom" id="Services" order="17" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="make" order="1" show_stripe_button="false" side_tool="true" />
+    </layout>
+    <recentWindows>
+      <value>Debug</value>
+      <value>Messages</value>
+      <value>Event Log</value>
+      <value>Project</value>
+      <value>Terminal</value>
+      <value>Problems View</value>
+    </recentWindows>
+  </component>
+  <component name="Trusted.Project.Settings" hasCheckedIfOldProject="true" trusted="YES" />
+  <component name="WindowStateProjectService">
+    <state x="314" y="86" key="#Inspections" timestamp="1631442013624">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="314" y="86" key="#Inspections/0.0.1366.768@0.0.1366.768" timestamp="1631442013624" />
+    <state x="258" y="140" width="844" height="502" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1631444014069">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="258" y="140" width="844" height="502" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1631444014069" />
+    <state x="463" y="148" key="FileChooserDialogImpl" timestamp="1631443960307">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="148" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1631443960307" />
+    <state width="1318" height="261" key="GridCell.Tab.0.bottom" timestamp="1631447881352">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1318" height="261" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1631447881352" />
+    <state width="1318" height="261" key="GridCell.Tab.0.center" timestamp="1631447881350">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1318" height="261" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1631447881350" />
+    <state width="1318" height="261" key="GridCell.Tab.0.left" timestamp="1631447881350">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1318" height="261" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1631447881350" />
+    <state width="1318" height="261" key="GridCell.Tab.0.right" timestamp="1631447881351">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1318" height="261" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1631447881351" />
+    <state width="1318" height="261" key="GridCell.Tab.1.bottom" timestamp="1631447881354">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1318" height="261" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1631447881354" />
+    <state width="1318" height="261" key="GridCell.Tab.1.center" timestamp="1631447881353">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1318" height="261" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1631447881353" />
+    <state width="1318" height="261" key="GridCell.Tab.1.left" timestamp="1631447881352">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1318" height="261" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1631447881352" />
+    <state width="1318" height="261" key="GridCell.Tab.1.right" timestamp="1631447881353">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1318" height="261" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1631447881353" />
+    <state x="184" y="25" key="SettingsEditor" timestamp="1631444245631">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="25" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1631444245631" />
+    <state width="498" height="345" key="SwitcherDM" timestamp="1631443407540">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="498" height="345" key="SwitcherDM/0.0.1366.768@0.0.1366.768" timestamp="1631443407540" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ipc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="1072" selection-start-line="1072" selection-end-line="1072" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="cidr-memory-view://6">
+      <provider selected="true" editor-type-id="memory-view">
+        <state relative-caret-position="18">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dwm.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="1736" column="23" selection-start-line="1736" selection-start-column="23" selection-end-line="1736" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

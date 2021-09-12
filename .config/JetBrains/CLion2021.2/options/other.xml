@@ -1,0 +1,63 @@
+<application>
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="$USER_HOME$/.nvm/versions/node/v16.6.1/bin/node" />
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontFace" value="Droid Sans Mono" />
+  </component>
+  <component name="ProjectPluginTrackerManager">
+    <trackers>
+      <map>
+        <entry key="1xjHLvfUZZ4b99JPl6Qv29xhzkb">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1y243g5QU9fINsnopoNUZvozf9C">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1y2FRVa6knbEt4uhgvRRlfLUbag">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="INSPECTION_FILTER_HISTORY" value="typo" />
+    <property name="InstalledPluginsSearchHistory" value="acejump&#10;aceju&#10;acej&#10;ace&#10;ac" />
+    <property name="KEYMAP" value="resume&#10;apply current layo&#10;alt&#10;files&#10;explorer" />
+    <property name="Markdown Split EditorLayout" value="Preview only" />
+    <property name="MarketplacePluginsSearchHistory" value="/tag:Keymap&#10;acejump&#10;easymotion&#10;easy&#10;theme" />
+    <property name="NonModalCommitCustomization.IsApplied" value="true" />
+    <property name="SHELLCHECK.PATH" value="$APPLICATION_PLUGINS_DIR$/Shell Script/shellcheck" />
+    <property name="SettingsSearchHistory" value="font size" />
+    <property name="appcds.runOnSecondStart" value="CL-212.5080.54-4741703e6f6b4cc92286ff86fcf0f13bca43a40b6cfa86f1a764de5f0ab6fedf" />
+    <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
+    <property name="build.toolwindow.Sync.selection.state" value="com.intellij.build.BuildTreeConsoleView" />
+    <property name="clion.initialConfigPerformed" value="true" />
+    <property name="evlsprt3.212" value="14" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/.local/src/dwm/cmake-build-debug/dwm&#10;/home/dominick/.local/src/dwm" />
+    <property name="file.gist.reindex.count" value="29" />
+    <property name="fileTypeChangedCounter" value="1" />
+    <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:com.jetbrains.cidr.lang.OCHeaderFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
+    <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
+    <property name="got.it.tooltip.reader.mode.got.it" value="1" />
+    <property name="ide.updates.previous.build.number" value="CL-212.5080.54" />
+    <property name="ide.updates.whats.new.shown.for" value="212" />
+    <property name="ideavim.statistics.timestamp" value="1631435884463" />
+    <property name="input.method.disabler.muted" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.local/src/dwm/cmake-build-debug/dwm" />
+    <property name="log.trace.categories" value="#com.jetbrains.rdserver.requests&#10;#com.jetbrains.rd.ide.document&#10;#com.jetbrains.rdserver.document&#10;#com.jetbrains.rdserver.editors&#10;#com.jetbrains.rdserver.actions&#10;#com.jetbrains.rdserver.permissions" />
+    <property name="registry.to.advanced.settings.migration.build" value="CL-212.5080.54" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="ts.lib.d.ts.version" value="4.3.5" />
+  </component>
+  <component name="ToolbarSettingsService">
+    <option name="NEW_TOOLBAR_SETTINGS" value="OLD_NAVBAR" />
+  </component>
+</application>

@@ -1,0 +1,196 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Undo">
+      <i c="1" l="1631449177433" />
+    </e>
+    <e n="CodeCompletion">
+      <i c="1" l="1631450447892" />
+    </e>
+    <e n="CommentByLineComment">
+      <i c="1" l="1631449209400" />
+    </e>
+    <e n="CompareClipboardWithSelection">
+      <i c="1" l="1631449219749" />
+    </e>
+    <e n="CreateDesktopEntry">
+      <i c="1" l="1631448270551" />
+    </e>
+    <e n="EditSourceInNewWindow">
+      <i c="1" l="1631449178146" />
+    </e>
+    <e n="EditorAddCaretPerSelectedLine">
+      <i c="2" l="1631449799690" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="46" l="1631456906854" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="1" l="1631448883206" />
+    </e>
+    <e n="EditorContextInfo">
+      <i c="6" l="1631456285629" />
+    </e>
+    <e n="EditorDeleteToWordEnd">
+      <i c="1" l="1631448582036" />
+    </e>
+    <e n="EditorDeleteToWordStart">
+      <i c="7" l="1631455852045" />
+    </e>
+    <e n="EditorDown">
+      <i c="10" l="1631448890770" />
+    </e>
+    <e n="EditorEnter">
+      <i c="3" l="1631449175563" />
+    </e>
+    <e n="EditorEscape">
+      <i c="1" l="1631450451951" />
+    </e>
+    <e n="EditorPaste">
+      <i c="1" l="1631453252767" />
+    </e>
+    <e n="EditorShowGutterIconTooltip">
+      <i c="3" l="1631455445394" />
+    </e>
+    <e n="EditorUp">
+      <i c="9" l="1631448888672" />
+    </e>
+    <e n="ExpressionTypeInfo">
+      <i c="3" l="1631454601695" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="2" l="1631448925292" />
+    </e>
+    <e n="GotoFile">
+      <i c="2" l="1631456803282" />
+    </e>
+    <e n="ParameterInfo">
+      <i c="2" l="1631455360920" />
+    </e>
+    <e n="QuickImplementations">
+      <i c="8" l="1631457034281" />
+    </e>
+    <e n="QuickJavaDoc">
+      <i c="26" l="1631457238369" />
+    </e>
+    <e n="QuickTypeDefinition">
+      <i c="7" l="1631457234394" />
+    </e>
+    <e n="Refactorings.QuickListPopupAction">
+      <i c="1" l="1631453259799" />
+    </e>
+    <e n="SearchEverywhere">
+      <i c="2" l="1631450381222" />
+    </e>
+    <e n="ShowErrorDescription">
+      <i c="10" l="1631457239941" />
+    </e>
+    <e n="ShowIntentionActions">
+      <i c="4" l="1631456466558" />
+    </e>
+    <e n="ShowPopupMenu">
+      <i c="1" l="1631450855955" />
+    </e>
+    <e n="ShowSettings">
+      <i c="7" l="1631457047137" />
+    </e>
+    <e n="ShowUsages">
+      <i c="5" l="1631457268016" />
+    </e>
+    <e n="ToggleLineBreakpoint">
+      <i c="1" l="1631456471246" />
+    </e>
+    <e n="Tree-selectChild">
+      <i c="4" l="1631448851815" />
+    </e>
+    <e n="Tree-selectNext">
+      <i c="27" l="1631448854221" />
+    </e>
+    <e n="Tree-selectParent">
+      <i c="1" l="1631448651949" />
+    </e>
+    <e n="Tree-selectPrevious">
+      <i c="10" l="1631448854635" />
+    </e>
+    <e n="Vcs.QuickListPopupAction">
+      <i c="1" l="1631452116455" />
+    </e>
+    <e n="VimFindActionIdAction">
+      <i c="2" l="1631450387476" />
+    </e>
+    <e n="WelcomeScreen.OpenDirectoryProject">
+      <i c="1" l="1631448643816" />
+    </e>
+    <e n="com.intellij.codeInsight.daemon.NavigateAction">
+      <i c="1" l="1631449070194" />
+    </e>
+    <e n="com.intellij.codeInsight.daemon.impl.DaemonTooltipWithActionRenderer$SettingsActionGroup">
+      <i c="1" l="1631455635312" />
+    </e>
+    <e n="com.intellij.codeInsight.daemon.impl.DaemonTooltipWithActionRenderer$ShowDocAction">
+      <i c="1" l="1631455640636" />
+    </e>
+    <e n="com.intellij.codeInsight.documentation.DocumentationComponent$MyGearActionGroup">
+      <i c="2" l="1631455651858" />
+    </e>
+    <e n="com.intellij.codeInsight.documentation.DocumentationComponent$ShowAsToolwindowAction">
+      <i c="1" l="1631449911273" />
+    </e>
+    <e n="com.intellij.codeInsight.documentation.DocumentationComponent$ShowToolbarAction">
+      <i c="2" l="1631455665925" />
+    </e>
+    <e n="com.intellij.codeInsight.hint.ImplementationViewComponent$BackAction">
+      <i c="2" l="1631451880338" />
+    </e>
+    <e n="com.intellij.codeInsight.hint.ImplementationViewComponent$ForwardAction">
+      <i c="2" l="1631451878691" />
+    </e>
+    <e n="com.intellij.ide.plugins.PluginManagerConfigurable$InstallFromDiskAction">
+      <i c="2" l="1631448362307" />
+    </e>
+    <e n="com.intellij.ide.plugins.newui.SelectionBasedPluginModelAction$EnableDisableAction">
+      <i c="1" l="1631457061645" />
+    </e>
+    <e n="com.intellij.ide.plugins.newui.SelectionBasedPluginModelAction$UninstallAction">
+      <i c="2" l="1631457071557" />
+    </e>
+    <e n="com.intellij.ide.plugins.newui.TabbedPaneHeaderComponent$3">
+      <i c="5" l="1631457070563" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+      <i c="54" l="1631457255857" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.impl.ActionToolbarImpl$2">
+      <i c="1" l="1631455662271" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="1" l="1631456211170" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="4" l="1631456804878" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.ToolWindowHeader$HideAction">
+      <i c="4" l="1631450992095" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$3">
+      <i c="4" l="1631448483512" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$TableMoveDownAction">
+      <i c="6" l="1631457272856" />
+    </e>
+    <e n="com.intellij.ui.content.tabs.TabbedContentAction$CloseAction">
+      <i c="1" l="1631449922768" />
+    </e>
+    <e n="com.intellij.xdebugger.impl.breakpoints.RemoveBreakpointGutterIconAction">
+      <i c="1" l="1631456472928" />
+    </e>
+    <e n="com.maddyhome.idea.vim.group.NotificationService$ActionIdNotifier$StopTracking">
+      <i c="2" l="1631450463283" />
+    </e>
+    <e n="com.maddyhome.idea.vim.group.NotificationService$notifyAboutShortcutConflict$2">
+      <i c="4" l="1631449262100" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ex.ExShortcutKeyAction">
+      <i c="298" l="1631457233579" />
+    </e>
+  </component>
+</application>
