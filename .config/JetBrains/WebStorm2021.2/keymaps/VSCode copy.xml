@@ -1,0 +1,5 @@
+<keymap version="1" name="VSCode copy" parent="VSCode">
+  <action id="EditorDuplicate">
+    <keyboard-shortcut first-keystroke="shift alt j" />
+  </action>
+</keymap>

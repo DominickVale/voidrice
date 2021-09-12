@@ -1,7 +1,23 @@
 <application>
+  <component name="LangManager">
+    <option name="languageName" value="JavaScript" />
+    <languageToProjectMap>
+      <entry key="JavaScript" value="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject" />
+    </languageToProjectMap>
+  </component>
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="$USER_HOME$/.config/nvm/versions/node/v16.9.1/bin/node">
+      <version-cache version="16.9.1" last-modified="1631295358000" />
+    </local-interpreter>
+  </component>
   <component name="ProjectPluginTrackerManager">
     <trackers>
       <map>
+        <entry key="1QJg9RDiKYQDPU0OjckZINqZe9Q">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
         <entry key="1tncmhTnHlxRN7Qhuy6f3ZtrHDc">
           <value>
             <ProjectPluginTracker />
@@ -16,9 +32,14 @@
     </trackers>
   </component>
   <component name="PropertiesComponent">
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
     <property name="GeneralSettings.initiallyConfigured" value="true" />
     <property name="InstalledPluginsSearchHistory" value="mouse&#10;mous&#10;m&#10;hover&#10;hov" />
-    <property name="KEYMAP" value="show" />
+    <property name="JestJavaScriptTestRunnerSupport.hideIgnoredTests" value="true" />
+    <property name="JestJavaScriptTestRunnerSupport.hidePassedTests" value="false" />
+    <property name="JestJavaScriptTestRunnerSupport.scrollToSource" value="true" />
+    <property name="JestJavaScriptTestRunnerSupport.selectFirtsDefect" value="true" />
+    <property name="KEYMAP" value="duplicate line&#10;duplicate&#10;show" />
     <property name="MarketplacePluginsSearchHistory" value="mouse&#10;menu&#10;hover&#10;/tag:Keymap&#10;react" />
     <property name="NonModalCommitCustomization.IsApplied" value="true" />
     <property name="PluginConfigurable.selectionTab" value="1" />
@@ -27,15 +48,17 @@
     <property name="appcds.runOnSecondStart" value="WS-212.5080.54-33fde5054802db5183bdd702e3a22acdf6c8e73edc89fe0da29e0d7d5b537b93" />
     <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
     <property name="evlsprt3.212" value="13" />
-    <property name="file.chooser.recent.files" value="$USER_HOME$/Projects/AmbientifyV2&#10;/home/dominick/Downloads/ide-eval-resetter-2.1.7/ide-eval-resetter-2.1.7/ide-eval-resetter-2.1.7.jar&#10;/home/dominick/Downloads/ide-eval-resetter-2.1.7.zip" />
-    <property name="file.gist.reindex.count" value="1" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/.config/nvm/versions/node/v16.9.1/bin/node&#10;/home/dominick/Projects/AmbientifyV2&#10;/home/dominick/Downloads/ide-eval-resetter-2.1.7/ide-eval-resetter-2.1.7/ide-eval-resetter-2.1.7.jar&#10;/home/dominick/Downloads/ide-eval-resetter-2.1.7.zip" />
+    <property name="file.gist.reindex.count" value="2" />
     <property name="fileTypeChangedCounter" value="1" />
     <property name="fileTypeDetectors" value="com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
     <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
+    <property name="got.it.tooltip.reset.lesson.got.it" value="1" />
     <property name="ide.memory.adjusted" value="true" />
     <property name="ide.updates.previous.build.number" value="WS-212.5080.54" />
     <property name="ide.updates.whats.new.shown.for" value="212" />
     <property name="ideavim.statistics.timestamp" value="1631448712194" />
+    <property name="ift.learning.panel.opened.in" value="212.5080.54" />
     <property name="input.method.disabler.muted" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Projects/AmbientifyV2" />
     <property name="log.trace.categories" value="#com.jetbrains.rdserver.requests&#10;#com.jetbrains.rd.ide.document&#10;#com.jetbrains.rdserver.document&#10;#com.jetbrains.rdserver.editors&#10;#com.jetbrains.rdserver.actions&#10;#com.jetbrains.rdserver.permissions" />

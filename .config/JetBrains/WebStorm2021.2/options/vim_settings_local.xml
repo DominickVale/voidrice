@@ -4,6 +4,8 @@
       <history-search>
         <entry encoding="base64">XDw+XD4=</entry>
         <entry encoding="base64">XDxDbG9zZVNpZGVEcmF3ZXJCdXR0b25cPg==</entry>
+        <entry encoding="base64">Ym9vaw==</entry>
+        <entry encoding="base64">YXV0aG8=</entry>
       </history-search>
       <history-cmd>
         <entry encoding="base64">YWN0aW9uIFNob3dFZGl0b3JIaWdobGlnaHRlclRva2Vu</entry>
@@ -62,6 +64,14 @@
   <component name="VimMarksSettings">
     <globalmarks />
     <filemarks>
+      <file name="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/sum.js" timestamp="1631461146042" />
+      <file name="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/refactoring.js" timestamp="1631458442895">
+        <mark key="'" line="0" column="35" />
+        <mark key="[" line="0" column="37" />
+        <mark key="]" line="0" column="36" />
+        <mark key="^" line="0" column="36" />
+        <mark key="." line="0" column="35" />
+      </file>
       <file name="$USER_HOME$/Projects/AmbientifyV2/src/screens/SideDrawer/SideDrawer.tsx" timestamp="1631457039725">
         <mark key="'" line="46" column="11" />
         <mark key="[" line="36" column="0" />
@@ -69,11 +79,29 @@
         <mark key="^" line="36" column="0" />
         <mark key="." line="36" column="0" />
       </file>
+      <file name="/fragment.js" timestamp="1631461673454">
+        <mark key="[" line="0" column="0" />
+      </file>
       <file name="$USER_HOME$/Projects/AmbientifyV2/src/App.tsx" timestamp="1631448895544">
         <mark key="'" line="10" column="15" />
         <mark key="[" line="11" column="0" />
         <mark key="]" line="11" column="0" />
         <mark key="." line="11" column="0" />
+      </file>
+      <file name="/" timestamp="1631453560670">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/sum.test.js" timestamp="1631461193618">
+        <mark key="[" line="5" column="26" />
+        <mark key="]" line="5" column="26" />
+        <mark key="^" line="5" column="26" />
+        <mark key="." line="5" column="25" />
+      </file>
+      <file name="/JavaScript Console" timestamp="1631461630768">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/basicCompletion.js" timestamp="1631458073454">
+        <mark key="'" line="4" column="15" />
       </file>
       <file name="$USER_HOME$/Projects/AmbientifyV2/src/services/engine/SoundEngine.ts" timestamp="1631449220137">
         <mark key="'" line="30" column="30" />
@@ -81,9 +109,6 @@
         <mark key="]" line="40" column="28" />
         <mark key="^" line="40" column="28" />
         <mark key="." line="40" column="27" />
-      </file>
-      <file name="/" timestamp="1631453560670">
-        <mark key="[" line="0" column="0" />
       </file>
     </filemarks>
     <jumps>
@@ -94,38 +119,44 @@
       <jump line="12" column="2" filename="$USER_HOME$/Projects/AmbientifyV2/src/screens/SideDrawer/SideDrawer.tsx" />
       <jump line="46" column="11" filename="$USER_HOME$/Projects/AmbientifyV2/src/screens/SideDrawer/SideDrawer.tsx" />
       <jump line="80" column="9" filename="$USER_HOME$/Projects/AmbientifyV2/src/screens/SideDrawer/SideDrawer.tsx" />
+      <jump line="4" column="15" filename="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/basicCompletion.js" />
+      <jump line="4" column="20" filename="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/codeInspection.js" />
+      <jump line="0" column="35" filename="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/refactoring.js" />
     </jumps>
   </component>
   <component name="VimRegisterSettings">
     <registers>
-      <register name="1" type="2">
-        <text encoding="base64">ICAgIFNvdW5kRW5naW5lLgo=</text>
+      <register name="1" type="4">
+        <text encoding="base64">dGQ+SmFja3NvbjwvdGQ+CiAgICA8dGQ+RXZlPC90ZD4KICAgIDx0ZD4yNDwvdGQ+CjwvdHI+Cjx0YWJsZT4KICAgIDx0cj4KICAgICAgICA8dGQ+Rmlyc3QgbmFtZTwvdGQ+CiAgICAgICAgPHRkPkxhc3QgbmFtZTwvdGQ+CiAgICAgICAgPHRkPkFnZTwvdGQ+CiAgICA8L3RyPgo8L3RhYmxlPgo8L2JvZHk+CjwvaHRtbD4=</text>
       </register>
       <register name="&quot;" type="4">
-        <text encoding="base64">Lg==</text>
+        <text encoding="base64">dGQ=</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">ICAgIFNvdW5kRW5naW5lLgo=</text>
       </register>
       <register name=":" type="4">
         <text encoding="base64">c291cmNlIH4vLmlkZWF2aW1yYw==</text>
       </register>
       <register name="+" type="4">
-        <text encoding="base64">Lg==</text>
+        <text encoding="base64">dGQ=</text>
       </register>
       <register name="-" type="4">
-        <text encoding="base64">Lg==</text>
+        <text encoding="base64">dGQ=</text>
       </register>
       <register name="." type="4">
-        <text encoding="base64" />
+        <text encoding="base64">L2hvbWUvZG9taW5pY2svLmNvbmZpZy9udm0vdmVyc2lvbnMvbm9kZS92MTYuOS4xL2Jpbi9ub2RlIC0tcmVxdWlyZSAvb3B0L1dlYlN0b3JtLTIxMi41MDgwLjU0L3BsdWdpbnMvSmF2YVNjcmlwdExhbmd1YWdlL2hlbHBlcnMvamVzdC1pbnRlbGxpai9saWIvamVzdC1pbnRlbGxpai1zdGRpbi1maXguanMgL2hvbWUvZG9taW5pY2svLmNvbmZpZy9udm0vdmVyc2lvbnMvbm9kZS92MTYuOS4xL2xpYi9ub2RlX21vZHVsZXMvamVzdC9iaW4vamVzdC5qcyAtLWNvbG9ycyAtLXJlcG9ydGVycyAvb3B0L1dlYlN0b3JtLTIxMi41MDgwLjU0L3BsdWdpbnMvSmF2YVNjcmlwdExhbmd1YWdlL2hlbHBlcnMvamVzdC1pbnRlbGxpai9saWIvamVzdC1pbnRlbGxpai1yZXBvcnRlci5qcyAtLXZlcmJvc2UKL2hvbWUvZG9taW5pY2svLmNvbmZpZy9udm0vdmVyc2lvbnMvbm9kZS92MTYuOS4xL2Jpbi9ub2RlIC0tcmVxdWlyZSAvb3B0L1dlYlN0b3JtLTIxMi41MDgwLjU0L3BsdWdpbnMvSmF2YVNjcmlwdExhbmd1YWdlL2hlbHBlcnMvamVzdC1pbnRlbGxpai9saWIvamVzdC1pbnRlbGxpai1zdGRpbi1maXguanMgL2hvbWUvZG9taW5pY2svLmNvbmZpZy9udm0vdmVyc2lvbnMvbm9kZS92MTYuOS4xL2xpYi9ub2RlX21vZHVsZXMvamVzdC9iaW4vamVzdC5qcyAtLWNvbG9ycyAtLXJlcG9ydGVycyAvb3B0L1dlYlN0b3JtLTIxMi41MDgwLjU0L3BsdWdpbnMvSmF2YVNjcmlwdExhbmd1YWdlL2hlbHBlcnMvamVzdC1pbnRlbGxpai9saWIvamVzdC1pbnRlbGxpai1yZXBvcnRlci5qcyAtLXZlcmJvc2UK</text>
       </register>
       <register name="/" type="4">
-        <text encoding="base64">XDxDbG9zZVNpZGVEcmF3ZXJCdXR0b25cPg==</text>
+        <text encoding="base64">YXV0aG8=</text>
       </register>
     </registers>
   </component>
   <component name="VimSearchSettings">
     <search>
-      <last-search encoding="base64">XDxDbG9zZVNpZGVEcmF3ZXJCdXR0b25cPg==</last-search>
+      <last-search encoding="base64">YXV0aG8=</last-search>
       <last-replace encoding="base64">fg==</last-replace>
-      <last-pattern encoding="base64">XDxDbG9zZVNpZGVEcmF3ZXJCdXR0b25cPg==</last-pattern>
+      <last-pattern encoding="base64">YXV0aG8=</last-pattern>
       <last-dir encoding="base64">MQ==</last-dir>
       <show-last encoding="base64">ZmFsc2U=</show-last>
     </search>

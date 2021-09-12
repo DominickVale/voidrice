@@ -99,16 +99,16 @@
     </panes>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8572000" />
+    <option name="totallyTimeSpent" value="9015000" />
   </component>
   <component name="ToolWindowManager">
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21801472" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21801472" />
       <window_info id="Structure" order="1" side_tool="true" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Commit" order="3" />
-      <window_info id="Learn" order="4" />
+      <window_info id="Learn" order="4" visible="true" weight="0.32977942" />
       <window_info id="Pull Requests" order="5" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
