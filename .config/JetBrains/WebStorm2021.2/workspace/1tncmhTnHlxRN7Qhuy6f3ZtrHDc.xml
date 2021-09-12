@@ -1,66 +1,38 @@
 <project version="4">
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/engine/SoundEngine.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/screens/SideDrawer/SideDrawer.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/state/slices/engine.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/engine/AmbientifySound.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="72">
+                  <caret line="4" selection-start-line="4" selection-end-line="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.prettierrc.js">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -79,6 +51,7 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" />
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -86,29 +59,22 @@
               <item name="AmbientifyV2" type="b2602c69:ProjectViewProjectNode" />
               <item name="AmbientifyV2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="AmbientifyV2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AmbientifyV2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9015000" />
+    <option name="totallyTimeSpent" value="9952000" />
   </component>
   <component name="ToolWindowManager">
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21801472" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21807691" />
       <window_info id="Structure" order="1" side_tool="true" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="Commit" order="3" />
-      <window_info id="Learn" order="4" visible="true" weight="0.32977942" />
+      <window_info id="Commit" order="3" weight="0.3303846" />
+      <window_info id="Learn" order="4" weight="0.32961538" />
       <window_info id="Pull Requests" order="5" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -124,13 +90,14 @@
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Services" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Eval Reset" order="13" weight="0.32997313" />
-      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32997313" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32941988" />
       <window_info anchor="right" x="0" y="0" width="102" height="544" id="Documentation" order="0" side_tool="true" visible="true" weight="0.32976973" />
-      <window_info anchor="right" id="Key Promoter X" order="6" />
+      <window_info anchor="right" id="Key Promoter X" order="1" />
     </layout>
     <recentWindows>
-      <value>Project</value>
       <value>Event Log</value>
+      <value>Commit</value>
+      <value>Project</value>
       <value>Eval Reset</value>
     </recentWindows>
   </component>
@@ -144,10 +111,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-69.1920.1040@0.0.1920.1040" timestamp="1623442616588" />
-    <state x="177" y="38" key="SettingsEditor" timestamp="1631457078156">
+    <state x="177" y="38" key="SettingsEditor" timestamp="1631477529985">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="177" y="38" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1631457078156" />
+    <state x="177" y="38" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1631477529985" />
     <state x="720" y="239" key="SettingsEditor/0.0.1920.1040/-1920.-69.1920.1040@0.0.1920.1040" timestamp="1623408892374" />
     <state x="249" y="73" width="745" height="744" key="dock-window-1" timestamp="1631449275065">
       <screen x="0" y="0" width="1366" height="768" />
@@ -161,18 +128,15 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="600" height="400" key="javadoc.popup/0.0.1366.768@0.0.1366.768" timestamp="1631457237873" />
-    <state x="343" y="82" width="672" height="685" key="search.everywhere.popup" timestamp="1631456804893">
+    <state x="343" y="82" width="672" height="685" key="search.everywhere.popup" timestamp="1631477237353">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="343" y="82" width="672" height="685" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1631456804893" />
+    <state x="343" y="82" width="672" height="685" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1631477237353" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="90">
           <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
@@ -182,14 +146,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/engine/SoundEngine.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="450">
           <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/state/slices/engine.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="252">
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
@@ -199,20 +163,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/engine/AmbientifySound.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="936">
           <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/SideDrawer/SideDrawer.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        <state relative-caret-position="378">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.buckconfig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.watchmanconfig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/babel.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.prettierrc.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

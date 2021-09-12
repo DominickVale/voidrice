@@ -11,7 +11,7 @@
     <feature id="editing.completion.replace" count="2" last-shown="1631457938158" last-used="1631458078767" shown-count="15" />
     <feature id="navigation.goto.inspection" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="navigation.popup.camelprefix" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="SearchEverywhere" count="13" last-shown="0" last-used="1631461667195" shown-count="0" />
+    <feature id="SearchEverywhere" count="14" last-shown="0" last-used="1631477219370" shown-count="0" />
     <feature id="navigation.popup.class" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="navigation.popup.file" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="navigation.popup.wildcards" count="0" last-shown="0" last-used="0" shown-count="0" />
@@ -36,7 +36,7 @@
     <feature id="codeassists.comment.block" count="2" last-shown="0" last-used="1631458584274" shown-count="0" />
     <feature id="codeassists.quickjavadoc" count="29" last-shown="0" last-used="1631461164256" shown-count="0" />
     <feature id="ui.recentchanges" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="ui.tree.speedsearch" count="2" last-shown="0" last-used="1631461149208" shown-count="0" />
+    <feature id="ui.tree.speedsearch" count="16" last-shown="0" last-used="1631477654201" shown-count="0" />
     <feature id="editing.completion.changeSorting" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="ui.horizontal.scrolling" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="codeassists.quickdefinition.lookup" count="0" last-shown="0" last-used="0" shown-count="0" />

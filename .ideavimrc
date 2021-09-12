@@ -1,9 +1,12 @@
-set mapleader =","
+let mapleader =" "
 set easymotion
 set commentary
+set NERDTree
 set clipboard+=unnamedplus
 set scrolloff=5
 set incsearch
+set showmode
+set showcmd
 nnoremap c "_c
 set number relativenumber
 " Enable autocompletion:
@@ -11,17 +14,12 @@ set wildmode=longest,list,full
 " Perform dot commands over visual blocks:
 vnoremap . :normal .<CR>
 " Easymotion
+map <leader> <Plug>(easymotion-prefix)
 map <leader><leader>. <Plug>(easymotion-repeat)
 map <leader><leader>f <Plug>(easymotion-bd-f)
 map <leader><leader>j <Plug>(easymotion-bd-line)
 map <leader><leader>k <Plug>(easymotion-bd-line)
 map <leader><leader>w <Plug>(easymotion-bd-w)
-
-" Shortcutting split navigation, saving a keypress:
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
 
 " Replace ex mode with gq
 map Q gq

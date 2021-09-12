@@ -64,7 +64,15 @@
   <component name="VimMarksSettings">
     <globalmarks />
     <filemarks>
-      <file name="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/sum.js" timestamp="1631461146042" />
+      <file name="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/sum.test.js" timestamp="1631461193618">
+        <mark key="[" line="5" column="26" />
+        <mark key="]" line="5" column="26" />
+        <mark key="^" line="5" column="26" />
+        <mark key="." line="5" column="25" />
+      </file>
+      <file name="/Dummy.txt" timestamp="1631477724261">
+        <mark key="[" line="0" column="0" />
+      </file>
       <file name="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/refactoring.js" timestamp="1631458442895">
         <mark key="'" line="0" column="35" />
         <mark key="[" line="0" column="37" />
@@ -72,30 +80,15 @@
         <mark key="^" line="0" column="36" />
         <mark key="." line="0" column="35" />
       </file>
-      <file name="$USER_HOME$/Projects/AmbientifyV2/src/screens/SideDrawer/SideDrawer.tsx" timestamp="1631457039725">
+      <file name="$USER_HOME$/Projects/AmbientifyV2/src/screens/SideDrawer/SideDrawer.tsx" timestamp="1631477271748">
         <mark key="'" line="46" column="11" />
-        <mark key="[" line="36" column="0" />
-        <mark key="]" line="36" column="0" />
-        <mark key="^" line="36" column="0" />
-        <mark key="." line="36" column="0" />
+        <mark key="[" line="34" column="0" />
+        <mark key="]" line="34" column="0" />
+        <mark key="^" line="34" column="0" />
+        <mark key="." line="34" column="0" />
       </file>
       <file name="/fragment.js" timestamp="1631461673454">
         <mark key="[" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/Projects/AmbientifyV2/src/App.tsx" timestamp="1631448895544">
-        <mark key="'" line="10" column="15" />
-        <mark key="[" line="11" column="0" />
-        <mark key="]" line="11" column="0" />
-        <mark key="." line="11" column="0" />
-      </file>
-      <file name="/" timestamp="1631453560670">
-        <mark key="[" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/sum.test.js" timestamp="1631461193618">
-        <mark key="[" line="5" column="26" />
-        <mark key="]" line="5" column="26" />
-        <mark key="^" line="5" column="26" />
-        <mark key="." line="5" column="25" />
       </file>
       <file name="/JavaScript Console" timestamp="1631461630768">
         <mark key="[" line="0" column="0" />
@@ -103,12 +96,21 @@
       <file name="$USER_HOME$/.cache/JetBrains/WebStorm2021.2/demo/LearnJavaScriptProject/basicCompletion.js" timestamp="1631458073454">
         <mark key="'" line="4" column="15" />
       </file>
+      <file name="$USER_HOME$/Projects/AmbientifyV2/src/App.tsx" timestamp="1631448895544">
+        <mark key="'" line="10" column="15" />
+        <mark key="[" line="11" column="0" />
+        <mark key="]" line="11" column="0" />
+        <mark key="." line="11" column="0" />
+      </file>
       <file name="$USER_HOME$/Projects/AmbientifyV2/src/services/engine/SoundEngine.ts" timestamp="1631449220137">
         <mark key="'" line="30" column="30" />
         <mark key="[" line="0" column="0" />
         <mark key="]" line="40" column="28" />
         <mark key="^" line="40" column="28" />
         <mark key="." line="40" column="27" />
+      </file>
+      <file name="/" timestamp="1631453560670">
+        <mark key="[" line="0" column="0" />
       </file>
     </filemarks>
     <jumps>
@@ -145,7 +147,7 @@
         <text encoding="base64">dGQ=</text>
       </register>
       <register name="." type="4">
-        <text encoding="base64">L2hvbWUvZG9taW5pY2svLmNvbmZpZy9udm0vdmVyc2lvbnMvbm9kZS92MTYuOS4xL2Jpbi9ub2RlIC0tcmVxdWlyZSAvb3B0L1dlYlN0b3JtLTIxMi41MDgwLjU0L3BsdWdpbnMvSmF2YVNjcmlwdExhbmd1YWdlL2hlbHBlcnMvamVzdC1pbnRlbGxpai9saWIvamVzdC1pbnRlbGxpai1zdGRpbi1maXguanMgL2hvbWUvZG9taW5pY2svLmNvbmZpZy9udm0vdmVyc2lvbnMvbm9kZS92MTYuOS4xL2xpYi9ub2RlX21vZHVsZXMvamVzdC9iaW4vamVzdC5qcyAtLWNvbG9ycyAtLXJlcG9ydGVycyAvb3B0L1dlYlN0b3JtLTIxMi41MDgwLjU0L3BsdWdpbnMvSmF2YVNjcmlwdExhbmd1YWdlL2hlbHBlcnMvamVzdC1pbnRlbGxpai9saWIvamVzdC1pbnRlbGxpai1yZXBvcnRlci5qcyAtLXZlcmJvc2UKL2hvbWUvZG9taW5pY2svLmNvbmZpZy9udm0vdmVyc2lvbnMvbm9kZS92MTYuOS4xL2Jpbi9ub2RlIC0tcmVxdWlyZSAvb3B0L1dlYlN0b3JtLTIxMi41MDgwLjU0L3BsdWdpbnMvSmF2YVNjcmlwdExhbmd1YWdlL2hlbHBlcnMvamVzdC1pbnRlbGxpai9saWIvamVzdC1pbnRlbGxpai1zdGRpbi1maXguanMgL2hvbWUvZG9taW5pY2svLmNvbmZpZy9udm0vdmVyc2lvbnMvbm9kZS92MTYuOS4xL2xpYi9ub2RlX21vZHVsZXMvamVzdC9iaW4vamVzdC5qcyAtLWNvbG9ycyAtLXJlcG9ydGVycyAvb3B0L1dlYlN0b3JtLTIxMi41MDgwLjU0L3BsdWdpbnMvSmF2YVNjcmlwdExhbmd1YWdlL2hlbHBlcnMvamVzdC1pbnRlbGxpai9saWIvamVzdC1pbnRlbGxpai1yZXBvcnRlci5qcyAtLXZlcmJvc2UK</text>
+        <text encoding="base64" />
       </register>
       <register name="/" type="4">
         <text encoding="base64">YXV0aG8=</text>

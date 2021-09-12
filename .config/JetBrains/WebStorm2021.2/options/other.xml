@@ -34,18 +34,17 @@
   <component name="PropertiesComponent">
     <property name="ExpandBeforeRunStepsPanel" value="true" />
     <property name="GeneralSettings.initiallyConfigured" value="true" />
-    <property name="InstalledPluginsSearchHistory" value="mouse&#10;mous&#10;m&#10;hover&#10;hov" />
+    <property name="InstalledPluginsSearchHistory" value="terminal&#10;termin&#10;term&#10;t&#10;syn" />
     <property name="JestJavaScriptTestRunnerSupport.hideIgnoredTests" value="true" />
     <property name="JestJavaScriptTestRunnerSupport.hidePassedTests" value="false" />
     <property name="JestJavaScriptTestRunnerSupport.scrollToSource" value="true" />
     <property name="JestJavaScriptTestRunnerSupport.selectFirtsDefect" value="true" />
-    <property name="KEYMAP" value="duplicate line&#10;duplicate&#10;show" />
-    <property name="MarketplacePluginsSearchHistory" value="mouse&#10;menu&#10;hover&#10;/tag:Keymap&#10;react" />
+    <property name="KEYMAP" value="terminal&#10;duplicate line&#10;duplicate&#10;show" />
+    <property name="MarketplacePluginsSearchHistory" value="terminal&#10;mouse&#10;menu&#10;hover&#10;/tag:Keymap" />
     <property name="NonModalCommitCustomization.IsApplied" value="true" />
-    <property name="PluginConfigurable.selectionTab" value="1" />
-    <property name="SettingsSearchHistory" value="hover&#10;documentation" />
+    <property name="SettingsSearchHistory" value="native terminal&#10;hover&#10;documentation" />
     <property name="ShowDocumentationInToolWindow" value="false" />
-    <property name="appcds.runOnSecondStart" value="WS-212.5080.54-33fde5054802db5183bdd702e3a22acdf6c8e73edc89fe0da29e0d7d5b537b93" />
+    <property name="appcds.runOnSecondStart" value="WS-212.5080.54-70f6862a1eaeea742d4d2d6dfc914f94217df276a4d2d4d7ce1995724edd8ced" />
     <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
     <property name="evlsprt3.212" value="13" />
     <property name="file.chooser.recent.files" value="$USER_HOME$/.config/nvm/versions/node/v16.9.1/bin/node&#10;/home/dominick/Projects/AmbientifyV2&#10;/home/dominick/Downloads/ide-eval-resetter-2.1.7/ide-eval-resetter-2.1.7/ide-eval-resetter-2.1.7.jar&#10;/home/dominick/Downloads/ide-eval-resetter-2.1.7.zip" />

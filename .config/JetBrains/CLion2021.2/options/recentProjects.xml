@@ -4,11 +4,11 @@
       <map>
         <entry key="$USER_HOME$/.local/src/dwm">
           <value>
-            <RecentProjectMetaInfo frameTitle="dwm – dwm.c" opened="true" projectWorkspaceId="1y2FRVa6knbEt4uhgvRRlfLUbag">
+            <RecentProjectMetaInfo frameTitle="dwm – ipc.c" opened="true" projectWorkspaceId="1y2FRVa6knbEt4uhgvRRlfLUbag">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="CL-212.5080.54" />
               <option name="buildTimestamp" value="1629791704149" />
-              <frame x="0" y="18" width="1360" height="744" />
+              <frame x="30" y="28" width="1300" height="724" />
               <option name="productionCode" value="CL" />
               <option name="projectOpenTimestamp" value="1631043494737" />
             </RecentProjectMetaInfo>
