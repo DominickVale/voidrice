@@ -1,9 +1,0 @@
-<application>
-  <component name="PerfProfilerSettings" executablePath="$USER_HOME$/.local/src/dwm/cmake-build-debug/dwm">
-    <option name="defaultCmdArgs">
-      <option value="--call-graph" />
-      <option value="dwarf" />
-      <option value="-q" />
-    </option>
-  </component>
-</application>
