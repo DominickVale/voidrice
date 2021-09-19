@@ -21,6 +21,9 @@ map <leader><leader>j <Plug>(easymotion-bd-line)
 map <leader><leader>k <Plug>(easymotion-bd-line)
 map <leader><leader>w <Plug>(easymotion-bd-w)
 
+# NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapCloseDir='h'
 " Replace ex mode with gq
 map Q gq
 
@@ -37,3 +40,9 @@ map gh <Action>(QuickJavaDoc)
 map ge <Action>(ShowErrorDescription)
 map gi <Action>(QuickImplementations)
 map gj <Action>(QuickTypeDefinition)
+map <c-w>q <Action>(UnsplitAll)<esc>
+map <c-w>w <Action>(CloseContent)<esc>
+
+" General remaps
+map <c-o> <Action>(Back)
+map <c-i> <Action>(Forward)
