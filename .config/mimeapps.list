@@ -26,9 +26,9 @@ x-scheme-handler/chrome=vivaldi-stable.desktop;
 x-scheme-handler/ftp=vivaldi-stable.desktop;
 x-scheme-handler/http=vivaldi-stable.desktop;
 x-scheme-handler/https=vivaldi-stable.desktop;
-application/jrd+json=vivaldi-stable.desktop
-application/json=vivaldi-stable.desktop
+application/jrd+json=text.desktop;
+application/json=text.desktop;
 
 [Added Associations]
-application/jrd+json=vivaldi-stable.desktop;
-application/json=vivaldi-stable.desktop;
+application/jrd+json=text.desktop;
+application/json=text.desktop;
