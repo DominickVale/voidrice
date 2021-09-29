@@ -1,0 +1,33 @@
+%YAML 1.3
+---
+- Key: [Lock PC, pressed]
+- Execute: [systemctl, suspend-then-hibernate, -i]
+...
+---
+- Key: [App Contextual Menu/Right Click, pressed]
+- Execute: sysact
+...
+---
+- Key: [Calculator, pressed]
+- Execute: [rofi, -theme, ~/.config/rofi/theme.rasi, -show, calc]
+...
+---
+- Key: [Play/Pause Fn, pressed]
+- Execute: [playerctl, play-pause]
+...
+---
+- Key: [Dashboard Launchpad/Action Center, pressed]
+- Execute: dmenu_run
+...
+---
+- Key: [Mission Control/Task View, pressed]
+- Execute: [st, -e, htop]
+...
+---
+- Key: [Brightness Up, pressed]
+- Execute: [picom-trans, -c, '+5']
+...
+---
+- Key: [Brightness Down, pressed]
+- Execute: [picom-trans, -c, '-5']
+...

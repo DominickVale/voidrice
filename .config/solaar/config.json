@@ -1,0 +1,50 @@
+{
+  "408A:3B87C7B1": {
+    "_modelId": "B35B408A0000",
+    "_name": "MX Keys Keyboard",
+    "_sensitive": {
+      "backlight": false,
+      "disable-keyboard-keys": false,
+      "divert-keys": true,
+      "fn-swap": false,
+      "multiplatform": true
+    },
+    "_serial": "3B87C7B1",
+    "_unitId": "3B87C7B1",
+    "backlight": true,
+    "disable-keyboard-keys": {
+      "1": false,
+      "16": false,
+      "2": false,
+      "4": false,
+      "8": false
+    },
+    "divert-keys": {
+      "10": 1,
+      "110": 1,
+      "111": 1,
+      "191": 0,
+      "199": 1,
+      "200": 1,
+      "209": 0,
+      "210": 0,
+      "211": 0,
+      "224": 1,
+      "225": 1,
+      "226": 0,
+      "227": 0,
+      "228": 0,
+      "229": 1,
+      "230": 0,
+      "231": 0,
+      "232": 0,
+      "233": 0,
+      "234": 1,
+      "235": 0,
+      "236": 0
+    },
+    "fn-swap": false,
+    "multiplatform": "0"
+  },
+  "_version": "1.0.7rc3"
+}
