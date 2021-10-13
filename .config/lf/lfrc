@@ -10,9 +10,8 @@ set icons
 set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set drawbox on
-set info 'size'
-set dircounts on
-
+set info size
+set dircounts
 # Vars that depend on environmental variables
 $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
 
@@ -82,6 +81,42 @@ cmd copyto ${{
 	notify-send "📋 File(s) copied." "File(s) copies to $dest."
 }}
 
+cmd file_info !LESSOPEN='| exiftool %s' LESS='-cRiX' less $f
+
+# use rsync to copy
+cmd paste &{{
+    load=$(cat ~/.local/share/lf/files)
+    mode=$(echo "$load" | sed -n '1p')
+    list=$(echo "$load" | sed '1d')
+    if [ $mode = 'copy' ]; then
+        rsync -av --ignore-existing --progress $list . \
+        | stdbuf -i0 -o0 -e0 tr '\r' '\n' \
+        | while read line; do
+            lf -remote "send $id echo $line"
+        done
+    elif [ $mode = 'move' ]; then
+        mv -n $list .
+    fi
+    lf -remote 'send load'
+    lf -remote 'send clear'
+}}
+
+# paste as a symbolic link to original
+cmd paste_link %{{
+  for file in $(cat ~/.local/share/lf/files); do
+    if [ ! -n "${mode+1}" ]; then
+      mode="$file"
+      continue
+    fi
+    files+=("$file")
+  done
+  if [ -z "$files" ] || [ "${#files[@]}" -lt 1 ]; then
+    lf -remote "send $id echo no files to link files: ${files}"
+    exit 0
+  fi
+  ln -sr $files -t .
+}}
+
 cmd bulk-rename ${{
     old="$(mktemp)"
     new="$(mktemp)"
@@ -144,6 +179,8 @@ map X !$f
 map o &mimeopen $f
 map O $mimeopen --ask $f
 
+map i file_info
+
 map r
 map re rename # at the very end
 map rr full_rename # new rename
@@ -152,6 +189,9 @@ map ri rename_before_extension # before extention
 map ra rename_after_extension # after extention
 map B bulkrename
 map b $setbg $f
+
+map p
+map pp paste
 
 map m
 map mf make_file
