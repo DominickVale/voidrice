@@ -20,7 +20,8 @@ alias \
 	mkd="mkdir -pv" \
 	yt="youtube-dl --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
-	ffmpeg="ffmpeg -hide_banner"
+	ffmpeg="ffmpeg -hide_banner" \
+	pv="pv --cursor --bytes --timer --progress --eta --rate --average-rate"
 
 # Colorize commands when possible.
 alias \
