@@ -47,7 +47,8 @@ alias \
 	f="fzf --height 40% --layout reverse --info inline --border \
     		--preview 'file {}; highlight --out-format=ansi {}' --preview-window right,50%,border-vertical" \
 	vfz='v $(f)' \
-	lfz='lf $(f)'
+	lfz='lf $(f)' \
+	nt="nethogs"
 
 alias \
 	magit="nvim -c MagitOnly" \
