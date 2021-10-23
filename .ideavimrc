@@ -2,6 +2,7 @@ let mapleader =" "
 set easymotion
 set commentary
 set NERDTree
+set surround
 set clipboard+=unnamedplus
 set scrolloff=5
 set incsearch
@@ -42,7 +43,12 @@ map gi <Action>(QuickImplementations)
 map gj <Action>(QuickTypeDefinition)
 map <c-w>q <Action>(UnsplitAll)<esc>
 map <c-w>w <Action>(CloseContent)<esc>
+map <c-w>r <Action>(CloseAllEditorsButActive)<esc>
 
 " General remaps
 map <c-o> <Action>(Back)
 map <c-i> <Action>(Forward)
+
+" Jump to start and end of line using the home row keys
+map H ^
+map L $

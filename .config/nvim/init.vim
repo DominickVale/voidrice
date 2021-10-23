@@ -19,6 +19,7 @@ Plug 'preservim/nerdtree', Cond(!exists('g:vscode'))
 Plug 'junegunn/goyo.vim'
 Plug 'jreybert/vimagit'
 Plug 'lukesmithxyz/vimling'
+Plug 'roryokane/detectindent'
 Plug 'vimwiki/vimwiki'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
@@ -107,6 +108,10 @@ set noshowcmd
 
 " Open corresponding .pdf/.html or preview
 	map <leader>p :!opout <c-r>%<CR><CR>
+
+" Jump to start and end of line using the home row keys
+	map H ^
+	map L $
 
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 	autocmd VimLeave *.tex !texclear %
