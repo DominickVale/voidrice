@@ -28,6 +28,7 @@ Plug 'psliwka/vim-smoothie'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
+Plug 'vim-scripts/Tabmerge'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -109,6 +110,7 @@ lua require'nvim-treesitter.configs'.setup { indent = { enable = true }, highlig
 	vnoremap . :normal .<CR>
 " Spell-check set to <leader>o, 'o' for 'orthography':
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
+	map <leader>o :setlocal spell! spelllang=en_us<CR>
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 	set splitbelow splitright
 " Easymotion
@@ -136,10 +138,10 @@ lua require'nvim-treesitter.configs'.setup { indent = { enable = true }, highlig
 	map <C-j> <C-w>j
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
-	noremap <silent> <C-S-Right> :vertical resize +1<CR>
-	noremap <silent> <C-S-Left> :vertical resize -1<CR>
-	noremap <silent> <C-S-Up> :resize -1<CR>
-	noremap <silent> <C-S-Down> :resize +1<CR>
+	noremap <silent> <C-S-Right> :vertical resize +5<CR>
+	noremap <silent> <C-S-Left> :vertical resize -5<CR>
+	noremap <silent> <C-S-Up> :resize -5<CR>
+	noremap <silent> <C-S-Down> :resize +5<CR>
 
 " Replace ex mode with gq
 	map Q gq
@@ -174,8 +176,11 @@ lua require'nvim-treesitter.configs'.setup { indent = { enable = true }, highlig
 	nnoremap <leader>d "_d
 	vnoremap <leader>d "_d
 
+	nnoremap <c-w>m :Tabmerge
+
+
 " Open current folder in a new terminal window
-	nnoremap <leader>t :!$nohup<space>st<space>&<space><enter><enter>
+	nnoremap <leader>t :!{nohup st </dev/null >/dev/null 2>&1 &}<CR><CR>
 
 " Git stuff
 	nnoremap <leader>gll :let g:_search_term = expand("%")<CR><bar>:Gclog -- %<CR>:call search(g:_search_term)<CR>
@@ -226,10 +231,8 @@ function! ToggleHiddenAll()
 	set showcmd
     endif
 endfunction
-nnoremap <leader>h :call ToggleHiddenAll()<CR>
 
 augroup highlight_yank
     autocmd!
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
 augroup END
-
