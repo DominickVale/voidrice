@@ -17,7 +17,6 @@ endfunction
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree', Cond(!exists('g:vscode'))
-Plug 'lukesmithxyz/vimling'
 Plug 'roryokane/detectindent'
 Plug 'vimwiki/vimwiki'
 Plug 'bling/vim-airline'
@@ -131,12 +130,6 @@ lua require'nvim-treesitter.configs'.setup { indent = { enable = true }, highlig
          else
 	     let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
         endif
-" vimling:
-	nm <leader><leader>d :call ToggleDeadKeys()<CR>
-	imap <leader><leader>d <esc>:call ToggleDeadKeys()<CR>a
-	nm <leader><leader>i :call ToggleIPA()<CR>
-	imap <leader><leader>i <esc>:call ToggleIPA()<CR>a
-	nm <leader><leader>q :call ToggleProse()<CR>
 
 " Shortcutting split navigation, saving a keypress:
 	map <C-h> <C-w>h

@@ -148,7 +148,7 @@ cmd chmod ${{
   read ans
 
   for file in "$fx"
-  do
+ do
     chmod $ans $file
   done
 
@@ -173,7 +173,7 @@ map C copyto
 map M moveto
 map <c-r> reload
 map <c-s> set hidden!
-map <enter> push :$st<space>&<enter>
+map <enter> ${{nohup st </dev/null >/dev/null 2>&1 &}}
 map x $$f
 map X !$f
 map o &mimeopen $f
