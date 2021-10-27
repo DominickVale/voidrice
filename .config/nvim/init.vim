@@ -280,3 +280,8 @@ augroup END
 augroup JsonToJsonc
 			autocmd! FileType json set filetype=jsonc
 augroup END
+
+augroup ProjectDrawer
+			autocmd!
+			autocmd VimEnter * if argc() == 0 | Explore! | endif
+augroup END
