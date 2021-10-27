@@ -5,14 +5,7 @@ local lspkind = require'lspkind'
 cmp.setup({
     snippet = {
         expand = function(args)
-            -- For `vsnip` user.
-            -- vim.fn["vsnip#anonymous"](args.body)
-
-            -- For `luasnip` user.
             require('luasnip').lsp_expand(args.body)
-
-            -- For `ultisnips` user.
-            -- vim.fn["UltiSnips#Anon"](args.body)
         end,
     },
     mapping = {
@@ -23,20 +16,26 @@ cmp.setup({
         ['<tab>'] = cmp.mapping.confirm({ select = true }),
     },
     formatting = {
-        format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+        -- format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+        format = function(entry, vim_item)
+          -- fancy icons and a name of kind
+          vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
+      
+          -- set a name for each source
+          vim_item.menu = ({
+            buffer = "[Buffer]",
+            nvim_lsp = "[LSP]",
+            luasnip = "[LuaSnip]",
+            nvim_lua = "[Lua]",
+            latex_symbols = "[Latex]",
+          })[entry.source.name]
+          return vim_item
+        end,
     },
     sources = {
         { name = 'nvim_lsp' },
-
-        -- For vsnip user.
-        -- { name = 'vsnip' },
-
-        -- For luasnip user.
         { name = 'luasnip' },
-
-        -- For ultisnips user.
-        -- { name = 'ultisnips' },
-
+        { name = 'path' },
         { name = 'buffer' },
     }
 })
@@ -58,15 +57,16 @@ require'lspconfig'.cmake.setup{config()}
 --Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-require'lspconfig'.jsonls.setup {
+require'lspconfig'.jsonls.setup({
   capabilities = capabilities,
-}
-require'lspconfig'.html.setup {
+})
+
+require'lspconfig'.html.setup({
   capabilities = capabilities,
-}
-require'lspconfig'.cssls.setup {
+})
+require'lspconfig'.cssls.setup({
   capabilities = capabilities,
-}
+})
 
 require'lspconfig'.clangd.setup(config({
     cmd = { "clangd", "--background-index", "--clang-tidy" },
@@ -102,3 +102,9 @@ local snippets_paths = function()
     end
     return paths
 end
+
+require("luasnip.loaders.from_vscode").lazy_load({
+    paths = snippets_paths(),
+    include = nil,  -- Load all languages
+    exclude = {}
+})
