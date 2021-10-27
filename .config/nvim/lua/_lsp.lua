@@ -1,5 +1,6 @@
 -- Setup nvim-cmp.
 local cmp = require'cmp'
+local lspkind = require'lspkind'
 
 cmp.setup({
     snippet = {
@@ -19,9 +20,11 @@ cmp.setup({
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.close(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<tab>'] = cmp.mapping.confirm({ select = true }),
     },
-
+    formatting = {
+        format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+    },
     sources = {
         { name = 'nvim_lsp' },
 
@@ -43,12 +46,15 @@ local function config(_config)
         capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
     }, _config or {})
 end
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.bashls.setup{}
-require'lspconfig'.tsserver.setup(config())
-require'lspconfig'.eslint.setup{}
-require'lspconfig'.tailwindcss.setup{}
-require'lspconfig'.cmake.setup{}
+
+require "lsp_signature".setup()
+
+require'lspconfig'.jedi_language_server.setup{config()}
+require'lspconfig'.bashls.setup{config()}
+require'lspconfig'.tsserver.setup{config()}
+require'lspconfig'.eslint.setup{config()}
+require'lspconfig'.tailwindcss.setup{config()}
+require'lspconfig'.cmake.setup{config()}
 --Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -56,6 +62,9 @@ require'lspconfig'.jsonls.setup {
   capabilities = capabilities,
 }
 require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
+require'lspconfig'.cssls.setup {
   capabilities = capabilities,
 }
 

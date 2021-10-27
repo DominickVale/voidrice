@@ -29,10 +29,15 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-scripts/Tabmerge'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'folke/trouble.nvim'
+Plug 'windwp/nvim-autopairs'
+Plug 'onsails/lspkind-nvim'
 
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'ThePrimeagen/git-worktree.nvim'
+Plug 'APZelos/blamer.nvim'
 
 " Autocompletion
 Plug 'mattn/emmet-vim'
@@ -42,6 +47,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'simrat39/symbols-outline.nvim'
+Plug 'ray-x/lsp_signature.nvim'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -60,6 +66,10 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+
+" Prettier"
+Plug 'sbdchd/neoformat'
+
 call plug#end()
 
 set title
@@ -92,7 +102,8 @@ smap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' 
 lua require("_lsp")
 lua require("_telescope")
 lua require'nvim-treesitter.configs'.setup { indent = { enable = true }, highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
-
+lua  require("trouble").setup{}
+lua require('nvim-autopairs').setup{}
 
 " Some basics:
 	nnoremap c "_c
@@ -214,25 +225,58 @@ if &diff
     highlight! link DiffText MatchParen
 endif
 
-" Function for toggling the bottom statusbar:
-let s:hidden_all = 1
-function! ToggleHiddenAll()
-    if s:hidden_all  == 0
-	let s:hidden_all = 1
-	set noshowmode
-	set noruler
-	set laststatus=0
-	set noshowcmd
-    else
-	let s:hidden_all = 0
-	set showmode
-	set ruler
-	set laststatus=2
-	set showcmd
-    endif
-endfunction
-
 augroup highlight_yank
     autocmd!
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
+augroup END
+
+let g:neoformat_enabled_javascript = ['prettier', 'eslint_d']
+let g:neoformat_verbose = 1
+let g:neoformat_only_msg_on_error = 1
+nnoremap <leader>== :silent Neoformat<CR>
+
+let g:smoothie_speed_exponentiation_factor=1.2
+
+let g:blamer_enabled = 1
+let g:blamer_delay = 5000
+highlight Blamer guifg=#454545
+
+function! Redir(cmd, rng, start, end)
+	for win in range(1, winnr('$'))
+		if getwinvar(win, 'scratch')
+			execute win . 'windo close'
+		endif
+	endfor
+	if a:cmd =~ '^!'
+		let cmd = a:cmd =~' %'
+			\ ? matchstr(substitute(a:cmd, ' %', ' ' . expand('%:p'), ''), '^!\zs.*')
+			\ : matchstr(a:cmd, '^!\zs.*')
+		if a:rng == 0
+			let output = systemlist(cmd)
+		else
+			let joined_lines = join(getline(a:start, a:end), '\n')
+			let cleaned_lines = substitute(shellescape(joined_lines), "'\\\\''", "\\\\'", 'g')
+			let output = systemlist(cmd . " <<< $" . cleaned_lines)
+		endif
+	else
+		redir => output
+		execute a:cmd
+		redir END
+		let output = split(output, "\n")
+	endif
+	vnew
+	let w:scratch = 1
+	setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile
+	call setline(1, output)
+endfunction
+
+command! -nargs=1 -complete=command -bar -range Redir silent call Redir(<q-args>, <range>, <line1>, <line2>)
+
+augroup DetectIndent
+   autocmd!
+   autocmd BufReadPost *  DetectIndent
+augroup END
+
+augroup JsonToJsonc
+			autocmd! FileType json set filetype=jsonc
 augroup END
