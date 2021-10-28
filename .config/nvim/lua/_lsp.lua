@@ -1,6 +1,9 @@
 -- Setup nvim-cmp.
 local cmp = require'cmp'
 local lspkind = require'lspkind'
+local luasnip = require'luasnip'
+
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
 cmp.setup({
     snippet = {
@@ -13,7 +16,7 @@ cmp.setup({
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.close(),
-        ['<tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
     },
     formatting = {
         -- format = lspkind.cmp_format({with_text = false, maxwidth = 50})
@@ -37,8 +40,11 @@ cmp.setup({
         { name = 'luasnip' },
         { name = 'path' },
         { name = 'buffer' },
+        { name = 'cmdline' },
     }
 })
+
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
 local function config(_config)
     return vim.tbl_deep_extend("force", {
@@ -48,20 +54,32 @@ end
 
 require "lsp_signature".setup()
 
-require'lspconfig'.jedi_language_server.setup{config()}
-require'lspconfig'.bashls.setup{config()}
-require'lspconfig'.tsserver.setup{config()}
-require'lspconfig'.eslint.setup{config()}
-require'lspconfig'.tailwindcss.setup{config()}
-require'lspconfig'.cmake.setup{config()}
+require'lspconfig'.jedi_language_server.setup{config({
+  capabilities = capabilities,
+})}
+require'lspconfig'.bashls.setup{config({
+  capabilities = capabilities,
+})}
+require'lspconfig'.tsserver.setup{config({
+  capabilities = capabilities,
+})}
+require'lspconfig'.eslint.setup{config({
+  capabilities = capabilities,
+})}
+require'lspconfig'.tailwindcss.setup{config({
+  capabilities = capabilities,
+})}
+require'lspconfig'.cmake.setup{config({
+  capabilities = capabilities,
+})}
 --Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-require'lspconfig'.jsonls.setup({
+require'lspconfig'.jsonls.setup ({
   capabilities = capabilities,
 })
 
-require'lspconfig'.html.setup({
+require'lspconfig'.html.setup ({
   capabilities = capabilities,
 })
 require'lspconfig'.cssls.setup({
@@ -93,7 +111,7 @@ local snippets_paths = function()
     local plugins = { "friendly-snippets" }
     local paths = {}
     local path
-    local root_path = vim.env.HOME .. '/.vim/plugged/'
+    local root_path = vim.env.HOME .. '/.config/nvim/plugged/'
     for _, plug in ipairs(plugins) do
         path = root_path .. plug
         if vim.fn.isdirectory(path) ~= 0 then

@@ -32,7 +32,7 @@ Plug 'vim-scripts/Tabmerge'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
 Plug 'windwp/nvim-autopairs'
-Plug 'onsails/lspkind-nvim'
+Plug 'windwp/nvim-ts-autotag'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -44,17 +44,21 @@ Plug 'mattn/emmet-vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'ray-x/lsp_signature.nvim'
+Plug 'onsails/lspkind-nvim'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
 " Snippets
-Plug 'L3MON4D3/LuaSnip'
+Plug 'L3MON4D3/luasnip'
+Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'tpope/vim-fugitive'
 
@@ -104,6 +108,7 @@ lua require("_telescope")
 lua require'nvim-treesitter.configs'.setup { indent = { enable = true }, highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
 lua  require("trouble").setup{}
 lua require('nvim-autopairs').setup{}
+lua require('nvim-ts-autotag').setup()
 
 " Some basics:
 	nnoremap c "_c
