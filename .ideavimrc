@@ -22,14 +22,17 @@ map <leader><leader>j <Plug>(easymotion-bd-line)
 map <leader><leader>k <Plug>(easymotion-bd-line)
 map <leader><leader>w <Plug>(easymotion-bd-w)
 
-# NERDTree
+map <leader>o :setlocal spell! spelllang=en_us<CR>
+map <leader>o :setlocal spell! spelllang=en_us<CR>
+
+"" NERDTree
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapCloseDir='h'
 " Replace ex mode with gq
 map Q gq
 
 " Replace all is aliased to S.
-nnoremap S :%s//g<Left><Left>
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 
 " Compile document, be it groff/LaTeX/markdown/etc.
 map <leader>c :w! \| !compiler "<c-r>%"<CR>
@@ -37,13 +40,15 @@ map <leader>c :w! \| !compiler "<c-r>%"<CR>
 " Open corresponding .pdf/.html or preview
 map <leader>p :!opout <c-r>%<CR><CR>
 
-map gh <Action>(QuickJavaDoc)
-map ge <Action>(ShowErrorDescription)
-map gi <Action>(QuickImplementations)
-map gj <Action>(QuickTypeDefinition)
-map <c-w>q <Action>(UnsplitAll)<esc>
-map <c-w>w <Action>(CloseContent)<esc>
+set splitbelow splitright
+map <leader>vh <Action>(QuickJavaDoc)
+map <leader>ve <Action>(ShowErrorDescription)
+map <leader>vi <Action>(QuickImplementations)
+map <leader>vj <Action>(QuickTypeDefinition)
+map <c-w>w <Action>(UnsplitAll)<esc>
+map <c-w>q <Action>(CloseContent)<esc>
 map <c-w>r <Action>(CloseAllEditorsButActive)<esc>
+nmap <leader>gs <Action>(ActivateVersionControlToolWindow)
 
 " General remaps
 map <c-o> <Action>(Back)
@@ -52,3 +57,33 @@ map <c-i> <Action>(Forward)
 " Jump to start and end of line using the home row keys
 map H ^
 map L $
+
+" Shortcutting split navigation, saving a keypress:
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" General"
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+nnoremap Y yg$
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+xnoremap <leader>p "_dP
+
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y gg"+yG
+
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
+augroup END
+
