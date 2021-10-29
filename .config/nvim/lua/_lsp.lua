@@ -1,9 +1,11 @@
--- Setup nvim-cmp.
 local cmp = require'cmp'
 local lspkind = require'lspkind'
 local luasnip = require'luasnip'
 
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+
+local null_ls = require("_null-ls")
+local u = require("utils")
 
 cmp.setup({
     snippet = {
@@ -52,6 +54,10 @@ local function config(_config)
     }, _config or {})
 end
 
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 require "lsp_signature".setup()
 
 require'lspconfig'.jedi_language_server.setup{config({
@@ -60,21 +66,53 @@ require'lspconfig'.jedi_language_server.setup{config({
 require'lspconfig'.bashls.setup{config({
   capabilities = capabilities,
 })}
-require'lspconfig'.tsserver.setup{config({
-  capabilities = capabilities,
-})}
-require'lspconfig'.eslint.setup{config({
-  capabilities = capabilities,
-})}
+local ts_utils_settings = {
+    -- debug = true,
+    import_all_scan_buffers = 100,
+    eslint_bin = "eslint_d",
+    eslint_enable_diagnostics = true,
+    eslint_opts = {
+        condition = function(utils)
+            return utils.root_has_file(".eslintrc.js")
+        end,
+        diagnostics_format = "#{m} [#{c}]",
+    },
+    enable_formatting = true,
+    -- formatter = "eslint_d",
+    update_imports_on_move = true,
+    formatter = "prettierd",
+
+    -- parentheses completion
+    complete_parens = true,
+    signature_help_in_parens = true,
+    -- filter out dumb module warning
+    filter_out_diagnostics_by_code = { 80001 },
+}
+require'lspconfig'.tsserver.setup{
+  on_attach = function(client, bufnr)
+      client.resolved_capabilities.document_formatting = false
+      client.resolved_capabilities.document_range_formatting = false
+
+      -- format on save
+      vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
+
+      local ts_utils = require("nvim-lsp-ts-utils")
+      ts_utils.setup(ts_utils_settings)
+      ts_utils.setup_client(client)
+  end,
+  flags = {
+      debounce_text_changes = 150,
+  },
+}
+-- require'lspconfig'.eslint.setup{config({
+--   capabilities = capabilities,
+-- })}
 require'lspconfig'.tailwindcss.setup{config({
   capabilities = capabilities,
 })}
 require'lspconfig'.cmake.setup{config({
   capabilities = capabilities,
 })}
---Enable (broadcasting) snippet capability for completion
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
 require'lspconfig'.jsonls.setup ({
   capabilities = capabilities,
 })
@@ -92,6 +130,8 @@ require'lspconfig'.clangd.setup(config({
 }))
 
 require'lspconfig'.yamlls.setup(config())
+
+null_ls.setup(on_attach)
 
 local opts = {
     -- whether to highlight the currently hovered symbol

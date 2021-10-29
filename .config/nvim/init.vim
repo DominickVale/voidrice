@@ -33,6 +33,8 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
+Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -193,7 +195,6 @@ lua require('nvim-ts-autotag').setup()
 	vnoremap <leader>d "_d
 
 	nnoremap <c-w>m :Tabmerge
-
 
 " Open current folder in a new terminal window
 	nnoremap <leader>t :!{nohup st </dev/null >/dev/null 2>&1 &}<CR><CR>
