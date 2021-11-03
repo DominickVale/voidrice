@@ -42,6 +42,7 @@ map <leader>p :!opout <c-r>%<CR><CR>
 
 set splitbelow splitright
 map <leader>vh <Action>(QuickJavaDoc)
+map <leader>vd <Action>(GotoDeclaration)
 map <leader>ve <Action>(ShowErrorDescription)
 map <leader>vi <Action>(QuickImplementations)
 map <leader>vj <Action>(QuickTypeDefinition)
@@ -50,6 +51,10 @@ map <c-w>q <Action>(CloseContent)<esc>
 map <c-w>r <Action>(CloseAllEditorsButActive)<esc>
 nmap <leader>gs <Action>(ActivateVersionControlToolWindow)
 
+map <leader>== <Action>(ReformatCode)
+nnoremap <leader>=o :action OptimizeImports<CR>
+map <leader>u <Action>(LocalHistory.ShowHistory)
+nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
 " General remaps
 map <c-o> <Action>(Back)
 map <c-i> <Action>(Forward)
@@ -68,12 +73,25 @@ map <C-l> <C-w>l
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <s-TAB> :action NextTab<CR>
+
 nnoremap Y yg$
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
-
+vnoremap < <gv
+vnoremap > >gv
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap <leader>zc :action CollapseAllRegions<CR>
+nnoremap <leader>zo :action ExpandAllRegions<CR>
 xnoremap <leader>p "_dP
+nnoremap ,r :action ActivateRunToolWindow<CR>
+nnoremap ,f :action RerunFailedTests<CR>
+map \r :source ~/.ideavimrc<CR>
+
+map <leader>t <Action>(com.sburlyaev.cmd.plugin.actions.OpenTerminal)
 
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y

@@ -194,6 +194,9 @@ lua require('nvim-ts-autotag').setup()
 	nnoremap <leader>d "_d
 	vnoremap <leader>d "_d
 
+vnoremap < <gv
+vnoremap > >gv
+
 	nnoremap <c-w>m :Tabmerge
 
 " Open current folder in a new terminal window
