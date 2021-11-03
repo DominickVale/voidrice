@@ -21,7 +21,8 @@ alias \
 	yt="youtube-dl --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	ffmpeg="ffmpeg -hide_banner" \
-	pv="pv --cursor --bytes --timer --progress --eta --rate --average-rate"
+	pv="pv --cursor --bytes --timer --progress --eta --rate --average-rate" \
+	gfzy="git fuzzy"
 
 # Colorize commands when possible.
 alias \
@@ -54,3 +55,16 @@ alias \
 	magit="nvim -c MagitOnly" \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+
+# am funny 
+alias \
+	fucking="sudo" \
+	pls="sudo" \
+	fuckthisshit="shutdown now" \
+	yeet="rm -rf" \
+	wtfis="man" \
+	nomnom="killall" \
+	cya="reboot" \
+	wtf="dmesg" \
+	yolo='git commit -m "$(curl -s http://whatthecommit.com/index.txt)"' \
+	gimmeh="touch"
