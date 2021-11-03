@@ -7,6 +7,7 @@ fi
 
 source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/antigen.zsh"
 source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins"
+source "/usr/share/autojump/autojump.zsh"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
