@@ -12,8 +12,10 @@ set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set drawbox on
 set info size
 set dircounts
+set preview true
+set previewer ~/.config/lf/preview
 # Vars that depend on environmental variables
-$lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
+#$lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
 
 # cmds/functions
 cmd on-cd &{{
@@ -59,47 +61,42 @@ cmd delete ${{
 	[ $ans = "y" ] && rm -rf -- $fx
 }}
 
-cmd moveto ${{
-	clear; tput cup $(($(tput lines)/3)); tput bold
-	set -f
-	clear; echo "Move to where?"
-	dest="$(cut -d'	' -f2- ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|' )" &&
-	for x in $fx; do
-		eval mv -iv \"$x\" \"$dest\"
-	done &&
-	notify-send "🚚 File(s) moved." "File(s) moved to $dest."
-}}
-
-cmd copyto ${{
-	clear; tput cup $(($(tput lines)/3)); tput bold
-	set -f
-	clear; echo "Copy to where?"
-	dest="$(cut -d'	' -f2- ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|' )" &&
-	for x in $fx; do
-		eval cp -ivr \"$x\" \"$dest\"
-	done &&
-	notify-send "📋 File(s) copied." "File(s) copies to $dest."
-}}
-
 cmd file_info !LESSOPEN='| exiftool %s' LESS='-cRiX' less $f
 
 # use rsync to copy
 cmd paste &{{
-    load=$(cat ~/.local/share/lf/files)
-    mode=$(echo "$load" | sed -n '1p')
-    list=$(echo "$load" | sed '1d')
-    if [ $mode = 'copy' ]; then
-        rsync -av --ignore-existing --progress $list . \
-        | stdbuf -i0 -o0 -e0 tr '\r' '\n' \
-        | while read line; do
-            lf -remote "send $id echo $line"
-        done
-    elif [ $mode = 'move' ]; then
-        mv -n $list .
-    fi
-    lf -remote 'send load'
-    lf -remote 'send clear'
+    set -- $(cat ~/.local/share/lf/files)
+    mode="$1"
+    shift
+    case "$mode" in
+        copy)
+            rsync -av --ignore-existing --progress -- "$@" . |
+            stdbuf -i0 -o0 -e0 tr '\r' '\n' |
+            while IFS= read -r line; do
+                lf -remote "send $id echo $line"
+            done
+            ;;
+        move) mv -n -- "$@" .;;
+    esac
+    rm ~/.local/share/lf/files
+    lf -remote "send clear"
+	lf -remote 'send reload'
 }}
+
+# Archive bindings
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+cmd zip %zip -r "$f" "$f"
+cmd tar %tar cvf "$f.tar" "$f"
+cmd targz %tar cvzf "$f.tar.gz" "$f"
+cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
 
 # paste as a symbolic link to original
 cmd paste_link %{{
@@ -137,23 +134,43 @@ cmd bulk-rename ${{
     lf -remote "send $id unselect"
 }}
 
-cmd make_file ${{
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile ${{
   printf "File Name: "
   read ans
   $EDITOR $ans
 }}
+
+cmd sudomkfile ${{
+  printf "File Name: "
+  read ans
+  sudo $EDITOR $ans
+}
 
 cmd chmod ${{
   printf "Mode Bits: "
   read ans
 
   for file in "$fx"
- do
+  do
     chmod $ans $file
   done
 
   lf -remote 'send reload'
 }}
+}
+
+cmd dragon %dragon-drag-and-drop -a -x $fx
+cmd dragon-stay %dragon-drag-and-drop -a $fx
+cmd dragon-individual %dragon-drag-and-drop $fx
+cmd cpdragon %cpdragon
+cmd mvdragon %mvdragon
+cmd dlfile %dlfile
 
 cmd setbg "$1"
 cmd bulkrename $printf '%s\n' $fx | vidir -
@@ -163,24 +180,42 @@ cmd rename_after_extension push re<a-b>
 cmd rename_before_extension push re<a-b><a-b><a-f>
 
 # Bindings
+#reset
+map d
+map gh
+# General
 map <c-f> $lf -remote "send $id select '$(fzf)'"
 map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf)"
-map gh
 map g top
 map D delete
 map E extract
-map C copyto
-map M moveto
 map <c-r> reload
 map <c-s> set hidden!
 map <enter> ${{nohup st </dev/null >/dev/null 2>&1 &}}
-map x $$f
-map X !$f
+map ex $$f
+map eX !$f
+map x cut
 map o &mimeopen $f
 map O $mimeopen --ask $f
 
+# Dragon Mapping
+map dr dragon
+map ds dragon-stay
+map di dragon-individual
+map dm mvdragon
+map dc cpdragon
+map dl dlfile
+
 map i file_info
 
+# Archives
+map az zip
+map at tar
+map ag targz
+map ab targz
+map au unarchive
+
+# Renames
 map r
 map re rename # at the very end
 map rr full_rename # new rename
@@ -194,15 +229,16 @@ map p
 map pp paste
 
 map m
-map mf make_file
+map mf mkfile
+map mr sudomkfile
+map md mkdir
 map mc chmod
-map md push :mkdir<space>
 
 map <c-e> down
 map <c-y> up
 map V push :!nvim<space>
+map U unselect
+map C clear
 
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"
-set previewer ~/.config/lf/preview
-set cleaner ~/.config/lf/cleaner

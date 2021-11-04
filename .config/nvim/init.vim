@@ -21,7 +21,7 @@ Plug 'roryokane/detectindent'
 Plug 'vimwiki/vimwiki'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
-Plug 'ap/vim-css-color'
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'gruvbox-community/gruvbox'
 Plug 'mbbill/undotree'
 Plug 'psliwka/vim-smoothie'
@@ -111,6 +111,7 @@ lua require'nvim-treesitter.configs'.setup { indent = { enable = true }, highlig
 lua  require("trouble").setup{}
 lua require('nvim-autopairs').setup{}
 lua require('nvim-ts-autotag').setup()
+lua require('colorizer').setup()
 
 " Some basics:
 	nnoremap c "_c
