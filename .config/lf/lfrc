@@ -179,10 +179,17 @@ cmd rename_at_beginning push re<c-a>
 cmd rename_after_extension push re<a-b>
 cmd rename_before_extension push re<a-b><a-b><a-f>
 
+cmd yank-dirname $dirname -- "$f" | head -c-1 | xclip -i -selection clipboard
+cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
+cmd yank-basename $basename -a -- $fx | head -c-1 | xclip -i -selection clipboard
+cmd yank-content $cat $fx | xclip -i -selection clipboard
+
 # Bindings
 #reset
+map y
 map d
 map gh
+
 # General
 map <c-f> $lf -remote "send $id select '$(fzf)'"
 map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf)"
@@ -239,6 +246,13 @@ map <c-y> up
 map V push :!nvim<space>
 map U unselect
 map C clear
+
+# yank
+map yy copy
+map yd yank-dirname
+map yp yank-path
+map yb yank-basename
+map yc yank-content
 
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"

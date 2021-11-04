@@ -11,6 +11,8 @@ for command in mount umount sv pacman updatedb su ; do
 	alias $command="sudo $command"
 done; unset command
 
+c() { curl "http://cheat.sh/$1"; }
+
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
 	cp="cp -iv" \
@@ -22,7 +24,8 @@ alias \
 	yta="yt -x -f bestaudio/best" \
 	ffmpeg="ffmpeg -hide_banner" \
 	pv="pv --cursor --bytes --timer --progress --eta --rate --average-rate" \
-	gfzy="git fuzzy"
+	gfzy="git fuzzy" \
+	cs="cheat"
 
 # Colorize commands when possible.
 alias \
