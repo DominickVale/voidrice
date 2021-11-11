@@ -1,3 +1,4 @@
+Plug 'wellle/targets.vim'
 let mapleader =" "
 set easymotion
 set commentary
@@ -10,7 +11,8 @@ set showmode
 set showcmd
 set highlightedyank
 set multiple-cursors
-nnoremap c "_c
+set ideavimjoin
+set ideamarks
 set number relativenumber
 " Enable autocompletion:
 set wildmode=longest,list,full
@@ -34,37 +36,40 @@ let g:NERDTreeMapCloseDir='h'
 map Q gq
 
 " Replace all is aliased to S.
-nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+vnoremap <leader>s :action Replace<CR>
 
 " Compile document, be it groff/LaTeX/markdown/etc.
 map <leader>c :w! \| !compiler "<c-r>%"<CR>
 
-" Open corresponding .pdf/.html or preview
-map <leader>p :!opout <c-r>%<CR><CR>
-
 set splitbelow splitright
-map <leader>vd <Action>(GotoDeclaration)
-map <leader>vh <Action>(QuickJavaDoc)
-map <leader>vj <Action>(QuickTypeDefinition)
-map <leader>vi <Action>(QuickImplementations)
-map <leader>vsd <Action>(ShowErrorDescription)
-map <leader>vca <Action>(ShowIntentionActions)
-map <leader>gs <Action>(ActivateVersionControlToolWindow)
-map <leader>vto <action>(OptimizeImports)<CR>
-map <leader>vrn <Action>(RenameElement)<CR>
-map <leader><c-f> <action>(reformatcode)
-map <leader>u <Action>(LocalHistory.ShowHistory)
-map <leader>r <Action>(Refactorings.QuickListPopupAction)<CR>
+map <leader>vd :action GotoDeclaration<CR>
+map <leader>vh :action QuickJavaDoc<CR>
+map <leader>vj :action QuickTypeDefinition<CR>
+map <leader>vi :action QuickImplementations<CR>
+map <leader>vsd :action ShowErrorDescription<CR>
+map <leader>vca :action ShowIntentionActions<CR>
+map <leader>gs :action ActivateVersionControlToolWindow<CR>
+map <leader>gm :action Git.Menu<CR>
+map <leader>vto :action OptimizeImports<CR>
+map <leader>vrn :action RenameElement<CR>
+map <leader><c-f>f :action ReformatCode<CR>
+map <leader><c-f>t :action Javascript.Linters.EsLint.Fix<CR>
+map <leader>hl :action LocalHistory.ShowHistory<CR>
+map <leader>ht :action Vcs.ShowTabbedFileHistory<CR>
+map <leader>r :action Refactorings.QuickListPopupAction<CR>
 
-map <c-w>w <Action>(UnsplitAll)<esc>
-map <c-w>q <Action>(CloseContent)<esc>
-map <c-w>r <Action>(CloseAllEditorsButActive)<esc>
-map g; <Action>(JumpToLastChange)
-map g, <Action>(JumpToNextChange)
+map <c-w>w :action UnsplitAll<CR><esc>
+map <c-w>q :action CloseContent<CR><esc>
+map <c-w>r :action CloseAllEditorsButActive<CR><esc>
+map g; :action JumpToLastChange<CR>
+map g, :action JumpToNextChange<CR>
+
+map <leader>a :action Annotate<CR>
 
 " General remaps
-map <c-o> <Action>(Back)
-map <c-i> <Action>(Forward)
+map <c-o> :action Back<CR>
+map <c-i> :action Forward<CR>
+nnoremap c "_c
 
 " Jump to start and end of line using the home row keys
 map H ^
@@ -77,11 +82,11 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " General"
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :action MoveLineDown<CR>
+vnoremap K :action MoveLineUp<CR>
 
-map <TAB> :action PreviousTab<CR>
-map <s-TAB> :action NextTab<CR>
+map <s-TAB> :action PreviousTab<CR>
+map <TAB> :action NextTab<CR>
 
 nnoremap Y yg$
 nnoremap n nzzzv
@@ -94,11 +99,12 @@ nnoremap zo :action ExpandRegion<CR>
 nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
 xnoremap <leader>p "_dP
-nnoremap ,r :action ActivateRunToolWindow<CR>
+nnoremap ,rw :action ActivateRunToolWindow<CR>
+nnoremap ,rr :action RunMenu<CR>
 nnoremap ,f :action RerunFailedTests<CR>
 map \r :source ~/.ideavimrc<CR>
 
-map <leader>t <Action>(com.sburlyaev.cmd.plugin.actions.OpenTerminal)
+map <leader>t :action com.sburlyaev.cmd.plugin.actions.OpenTerminal<CR>
 
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y

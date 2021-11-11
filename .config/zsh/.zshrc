@@ -92,6 +92,14 @@ bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
 bindkey '^[[P' delete-char
 
+# Fzf related
+# Auto-completion
+[[ $- == *i* ]] && source "/usr/share/fzf/completion.zsh" 2> /dev/null
+# Key bindings
+source "/usr/share/fzf/key-bindings.zsh"
+
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line

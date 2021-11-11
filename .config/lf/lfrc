@@ -1,5 +1,4 @@
 set ratios 1:2:3
-# Luke's lf settings
 
 # Basic vars
 set shell bash
@@ -40,8 +39,6 @@ cmd open ${{
         *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
     esac
 }}
-
-cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
 
 cmd extract ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
@@ -134,10 +131,10 @@ cmd bulk-rename ${{
     lf -remote "send $id unselect"
 }}
 
-cmd mkdir ${{
-  printf "Directory Name: "
-  read ans
-  mkdir $ans
+cmd mkdir %{{
+    printf "Name of the directory: "
+    read dirname
+    mkdir -p "$(echo $dirname | tr ' ' '\ ')"
 }}
 
 cmd mkfile ${{
@@ -150,20 +147,39 @@ cmd sudomkfile ${{
   printf "File Name: "
   read ans
   sudo $EDITOR $ans
-}
+}}
 
-cmd chmod ${{
-  printf "Mode Bits: "
-  read ans
+cmd chown %{{
+  printf " chown "
+  read own
 
   for file in "$fx"
   do
-    chmod $ans $file
+    chown $own $file
   done
 
   lf -remote 'send reload'
 }}
-}
+
+cmd chmod %{{
+  printf " chmod "
+  read bits
+  for file in "$fx"
+  do
+    chmod $bits $file
+  done
+  lf -remote 'send reload';
+  sleep 1
+  lf -remote 'send reload';
+}}
+
+cmd filesize ${{
+    path=$(realpath $f)
+    #if [ -z $path ]; then path=$(printf $f); fi
+    size=$(du -sh "$path" | awk '{print $1}')
+    freespace=$(df -h $path | awk 'FNR == 2 {print $4}')
+    lf -remote "send echomsg \"Size: ${size}, Space on disk: ${freespace}. \""
+}}
 
 cmd dragon %dragon-drag-and-drop -a -x $fx
 cmd dragon-stay %dragon-drag-and-drop -a $fx
@@ -189,6 +205,7 @@ cmd yank-content $cat $fx | xclip -i -selection clipboard
 map y
 map d
 map gh
+map f
 
 # General
 map <c-f> $lf -remote "send $id select '$(fzf)'"
@@ -240,6 +257,7 @@ map mf mkfile
 map mr sudomkfile
 map md mkdir
 map mc chmod
+map mo chown
 
 map <c-e> down
 map <c-y> up
@@ -254,5 +272,6 @@ map yp yank-path
 map yb yank-basename
 map yc yank-content
 
+map ff filesize
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"

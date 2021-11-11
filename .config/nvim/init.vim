@@ -15,6 +15,7 @@ function! Cond(Cond, ...)
 endfunction
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
+Plug 'wellle/targets.vim'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree', Cond(!exists('g:vscode'))
 Plug 'roryokane/detectindent'
@@ -24,7 +25,7 @@ Plug 'tpope/vim-commentary'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'gruvbox-community/gruvbox'
 Plug 'mbbill/undotree'
-Plug 'psliwka/vim-smoothie'
+"Plug 'psliwka/vim-smoothie'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
