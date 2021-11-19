@@ -19,7 +19,7 @@
 [colors]
 background-x = ${xrdb:color0:#222}
 secondary = ${xrdb:color5}
-background = ${xrdb:background}
+background = #111112
 background-wm = ${xrdb:color8}
 background-alt = ${xrdb:color0}
 foreground = ${xrdb:foreground}
@@ -39,7 +39,7 @@ screenchange-reload = true
 enable-ipc = true
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 18
+height = 24
 ;offset-x = 1%
 ;offset-y = -10%
 radius = 0
@@ -60,7 +60,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = UbuntuMono:size=10;1
+font-0 = UbuntuMono:size=13;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=89;1
 font-3 = NotoColorEmoji:fontformat=truetype:scale=12:antialias=false;
@@ -69,12 +69,12 @@ font-5 = font awesome 5 free solid:pixelsize=10;1
 font-6 = font awesome 5 free brands regular::pixelsize=10;1
 
 modules-left = dwm
-modules-right = torrents nettraf memory battery pulseaudio date xkeyboard temperature cpu-usage cpu-usage-bars
+modules-right = torrents nettraf memory disk battery pulseaudio date xkeyboard temperature cpu-usage cpu-usage-bars
 ;modules-right = torrents nettraf weather backlight-acpi memory temperature battery pulseaudio date xkeyboard cpu-usage cpu-usage-bars powermenu
 
 tray-position = right
 tray-padding = 2
-tray-background = ${colors.background-alt}
+tray-background = #111112
 tray-scale = 1
 ;wm-restack = bspwm
 ;wm-restack = i3networkmanager_dmenu
@@ -151,7 +151,7 @@ label-floating = F
 ; focused = Selected tag on focused monitor
 label-focused = %name%
 label-focused-foreground = #fff
-label-focused-background = ${colors.background-wm}
+label-focused-background = #444449
 label-focused-padding = 2
 
 ; unfocused = Unselected tag on unselected monitor
@@ -160,7 +160,7 @@ label-unfocused-padding = 0
 
 ; visible = Unselected tag, but occupied tag on any monitor
 label-visible = %name%
-label-visible-background = ${colors.background-alt}
+label-visible-background = #1d2021
 label-visible-padding = 1
 
 ; urgent = Unselected tag with window that has urgency hint set
@@ -296,18 +296,18 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-[module/date]
-type = internal/date
-interval = 5
+; [module/date]
+; type = internal/date
+; interval = 5
 
-date-alt =
-date = " %D %a"
-time = %H:%M
-time-alt = %H:%M:%S
+; date-alt =
+; date = " %D %a"
+; time = %H:%M
+; time-alt = %H:%M:%S
 
-format-prefix = 📅
-format-prefix-foreground = ${colors.foreground-alt}
-label = %date% %time%
+; format-prefix = 📅
+; format-prefix-foreground = ${colors.foreground-alt}
+; label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -426,6 +426,13 @@ menu-2-1-exec = menu-open-0
 margin-top = 0
 margin-bottom = 0
 
+[module/date]
+type = custom/script
+exec = sb-clock
+click-left = xdg-open vivaldi://calendar
+click-right = x$TERMINAL -e calcurse &
+interval = 10
+
 [module/torrents]
 type = custom/script
 exec = echo 📥
@@ -440,6 +447,13 @@ label = "%output%"
 click-left = $TERMINAL -e htop &
 interval = 10
 format-prefix = "🧠 "
+
+[module/disk]
+type = custom/script
+exec = sb-disk
+label = "%output%"
+click-left = $TERMINAL -e htop &
+interval = 10
 
 [module/cpu-usage-bars]
 type = custom/script
