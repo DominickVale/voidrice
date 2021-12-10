@@ -23,8 +23,8 @@ background = #111112
 background-wm = ${xrdb:color8}
 background-alt = ${xrdb:color0}
 foreground = ${xrdb:foreground}
-foreground-alt = ${xrdb:color12}
-primary = ${xrdb:color4}
+foreground-alt = ${xrdb:color11}
+primary = ${xrdb:color12}
 alert = ${xrdb:color1}
 
 [settings]

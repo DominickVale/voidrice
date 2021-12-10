@@ -29,7 +29,9 @@ alias \
 	t="tmux" \
 	tl="tmux ls" \
 	ta="tmux a" \
-	tat="tmux a -t"
+	tat="tmux a -t" \
+	xc="xclip -selection clipboard" \
+	setup_gdrive="rclone mount --daemon gdrive: /home/dominick/gdrive/"
 
 # Colorize commands when possible.
 alias \

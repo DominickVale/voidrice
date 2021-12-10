@@ -36,7 +36,7 @@ let g:NERDTreeMapCloseDir='h'
 map Q gq
 
 " Replace all is aliased to S.
-vnoremap <leader>s :action Replace<CR>
+map <leader>s :action Replace<CR>
 
 " Compile document, be it groff/LaTeX/markdown/etc.
 map <leader>c :w! \| !compiler "<c-r>%"<CR>
@@ -44,6 +44,7 @@ map <leader>c :w! \| !compiler "<c-r>%"<CR>
 set splitbelow splitright
 map <leader>vd :action GotoDeclaration<CR>
 map <leader>vh :action QuickJavaDoc<CR>
+map <leader>vy :action GotoImplementation<CR>
 map <leader>vj :action QuickTypeDefinition<CR>
 map <leader>vi :action QuickImplementations<CR>
 map <leader>vsd :action ShowErrorDescription<CR>
@@ -54,6 +55,7 @@ map <leader>vto :action OptimizeImports<CR>
 map <leader>vrn :action RenameElement<CR>
 map <leader><c-f>f :action ReformatCode<CR>
 map <leader><c-f>t :action Javascript.Linters.EsLint.Fix<CR>
+map <leader><c-f>p :action ReformatWithPrettierAction<CR>
 map <leader>hl :action LocalHistory.ShowHistory<CR>
 map <leader>ht :action Vcs.ShowTabbedFileHistory<CR>
 map <leader>r :action Refactorings.QuickListPopupAction<CR>
@@ -112,6 +114,9 @@ nnoremap <leader>Y gg"+yG
 
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
+
+" Select text that was last pasted
+nnoremap gp `[v`]
 
 " Settings
 let g:highlightedyank_highlight_duration = "100"

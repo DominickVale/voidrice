@@ -4,9 +4,11 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+ZSH_CONF_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
-source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/antigen.zsh"
-source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins"
+source "${ZSH_CONF_HOME}/antigen.zsh"
+# Load plugins
+source "${ZSH_CONF_HOME}/plugins"
 source "/usr/share/autojump/autojump.zsh"
 
 # If you come from bash you might have to change your $PATH.
@@ -50,6 +52,17 @@ _comp_options+=(globdots)		# Include hidden files.
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
+
+source "${ZSH_CONF_HOME}/fzf-tab/fzf-tab.plugin.zsh"
+zstyle ':completion:*:descriptions' format '[%d]'
+# give a preview of commandline arguments when completing `kill`
+zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
+zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview \
+  '[[ $group == "[process ID]" ]] && ps --pid=$word -o cmd --no-headers -w -w'
+zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
+zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
+zstyle ':fzf-tab:complete:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' \
+	fzf-preview 'echo ${(P)word}'
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char

@@ -196,8 +196,17 @@ lua require('colorizer').setup()
 	nnoremap <leader>d "_d
 	vnoremap <leader>d "_d
 
-vnoremap < <gv
-vnoremap > >gv
+	" Select text that was last pasted
+	nnoremap gp `[v`]
+
+" Start a new change before deleting with Ctrl+u, so a normal mode "u" can still
+" recover the deleted word or line.  Normally Ctrl+u while in insert mode
+" would delete the text without undo history and it would be lost forever.
+	inoremap <c-u> <c-g>u<c-u>
+	inoremap <c-w> <c-g>u<c-w>
+
+	vnoremap < <gv
+	vnoremap > >gv
 
 	nnoremap <c-w>m :Tabmerge
 

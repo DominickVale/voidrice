@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "350x10-50+35"
+    geometry = "0x10-50+35"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -124,7 +124,7 @@
     #   %n  progress value if set without any extra characters
     # Markup is allowed
     #format = "<b>%s</b>\n%b"
-    format = "<small>(%a)</small>\n<b>%s %p</b>\n%b\n%p"
+    format = "<b>%s %p</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -207,6 +207,9 @@
     # is connected or disconnected which might break follow mode if the screen
     # layout changes.
     force_xinerama = false
+
+    mouse_middle_click = context,close_current
+    mouse_left_click = do_action
 
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
