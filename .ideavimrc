@@ -1,5 +1,6 @@
 Plug 'wellle/targets.vim'
 let mapleader =" "
+set smartcase
 set easymotion
 set commentary
 set NERDTree
