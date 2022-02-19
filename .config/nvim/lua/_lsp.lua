@@ -107,9 +107,10 @@ require'lspconfig'.tsserver.setup{
 -- require'lspconfig'.eslint.setup{config({
 --   capabilities = capabilities,
 -- })}
-require'lspconfig'.tailwindcss.setup{config({
-  capabilities = capabilities,
-})}
+-- require'lspconfig'.tailwindcss.setup{config({
+--   capabilities = capabilities,
+-- })}
+require'lspconfig'.bashls.setup{}
 require'lspconfig'.cmake.setup{config({
   capabilities = capabilities,
 })}

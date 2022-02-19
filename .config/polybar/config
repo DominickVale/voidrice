@@ -91,6 +91,49 @@ underline-size = 2
 cursor-click = pointer
 cursor-scroll = default
 
+[bar/secondary]
+enable-ipc = true
+monitor = ${env:MONITOR:HDMI-0}
+width = 100%
+height = 16
+; offset-x = 45%
+; offset-y = -10%
+radius = 0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = UbuntuMono:size=13;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=89;1
+font-3 = NotoColorEmoji:fontformat=truetype:scale=12:antialias=false;
+font-4 = DejaVuSans:pixelsize=9;1
+font-5 = font awesome 5 free solid:pixelsize=10;1
+font-6 = font awesome 5 free brands regular::pixelsize=10;1
+
+modules-left = dwm
+; modules-right = torrents nettraf memory disk battery pulseaudio date xkeyboard temperature cpu-usage cpu-usage-bars
+;modules-right = torrents nettraf weather backlight-acpi memory temperature battery pulseaudio date xkeyboard cpu-usage cpu-usage-bars powermenu
+
+override-redirect = false
+
+underline-size = 2
+cursor-click = pointer
+cursor-scroll = default
+
 [module/dwm]
 type = internal/dwm
 format = <label-tags> <label-layout> <label-floating> <label-title>
@@ -128,7 +171,7 @@ secondary-layout-symbol = [M]
 label-title = %title%
 label-title-padding = 0
 label-title-foreground = ${colors.primary}
-label-title-maxlen = 40
+label-title-maxlen = 60
 
 ; Defaults to 'Desktop'
 label-title-default = "Desktop"
@@ -429,8 +472,8 @@ margin-bottom = 0
 [module/date]
 type = custom/script
 exec = sb-clock
-click-left = xdg-open vivaldi://calendar
-click-right = x$TERMINAL -e calcurse &
+click-left = vivaldi-stable vivaldi://calendar
+click-right = $TERMINAL -e calcurse &
 interval = 10
 
 [module/torrents]

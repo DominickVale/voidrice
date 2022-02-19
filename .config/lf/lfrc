@@ -58,7 +58,7 @@ cmd delete ${{
 	[ $ans = "y" ] && rm -rf -- $fx
 }}
 
-cmd file_info !LESSOPEN='| exiftool %s' LESS='-cRiX' less $f
+cmd fileinfo !LESSOPEN='| exiftool %s' LESS='-cRiX' less $f
 
 # use rsync to copy
 cmd paste &{{
@@ -181,6 +181,15 @@ cmd filesize ${{
     lf -remote "send echomsg \"Size: ${size}, Space on disk: ${freespace}. \""
 }}
 
+cmd foldersize !{{
+  max_depth=0
+  if [ -z "$fs" ]; then
+    fx="."
+    max_depth=1
+  fi
+  echo "$fx" | xargs -r -d "\n" du --max-depth="$max_depth" -h --apparent-size
+}}
+
 cmd dragon %dragon-drag-and-drop -a -x $fx
 cmd dragon-stay %dragon-drag-and-drop -a $fx
 cmd dragon-individual %dragon-drag-and-drop $fx
@@ -206,10 +215,10 @@ map y
 map d
 map gh
 map f
+map i
 
 # General
 map <c-f> $lf -remote "send $id select '$(fzf)'"
-map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf)"
 map g top
 map D delete
 map E extract
@@ -230,7 +239,8 @@ map dm mvdragon
 map dc cpdragon
 map dl dlfile
 
-map i file_info
+map ii fileinfo
+map if foldersize
 
 # Archives
 map az zip
@@ -263,7 +273,7 @@ map <c-e> down
 map <c-y> up
 map V push :!nvim<space>
 map U unselect
-map C clear
+map CC clear
 
 # yank
 map yy copy
@@ -272,6 +282,5 @@ map yp yank-path
 map yb yank-basename
 map yc yank-content
 
-map ff filesize
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"

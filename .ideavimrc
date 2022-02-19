@@ -42,7 +42,6 @@ map <leader>s :action Replace<CR>
 " Compile document, be it groff/LaTeX/markdown/etc.
 map <leader>c :w! \| !compiler "<c-r>%"<CR>
 
-set splitbelow splitright
 map <leader>vd :action GotoDeclaration<CR>
 map <leader>vh :action QuickJavaDoc<CR>
 map <leader>vy :action GotoImplementation<CR>
@@ -50,15 +49,15 @@ map <leader>vj :action QuickTypeDefinition<CR>
 map <leader>vi :action QuickImplementations<CR>
 map <leader>vsd :action ShowErrorDescription<CR>
 map <leader>vca :action ShowIntentionActions<CR>
-map <leader>gs :action ActivateVersionControlToolWindow<CR>
+map <leader>gw :action ActivateVersionControlToolWindow<CR>
 map <leader>gm :action Git.Menu<CR>
+map <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
 map <leader>vto :action OptimizeImports<CR>
 map <leader>vrn :action RenameElement<CR>
 map <leader><c-f>f :action ReformatCode<CR>
 map <leader><c-f>t :action Javascript.Linters.EsLint.Fix<CR>
 map <leader><c-f>p :action ReformatWithPrettierAction<CR>
 map <leader>hl :action LocalHistory.ShowHistory<CR>
-map <leader>ht :action Vcs.ShowTabbedFileHistory<CR>
 map <leader>r :action Refactorings.QuickListPopupAction<CR>
 
 map <c-w>w :action UnsplitAll<CR><esc>
@@ -73,6 +72,7 @@ map <leader>a :action Annotate<CR>
 map <c-o> :action Back<CR>
 map <c-i> :action Forward<CR>
 nnoremap c "_c
+map <leader><leader>s :action SaveAll<CR>
 
 " Jump to start and end of line using the home row keys
 map H ^
@@ -88,8 +88,8 @@ map <C-l> <C-w>l
 vnoremap J :action MoveLineDown<CR>
 vnoremap K :action MoveLineUp<CR>
 
-map <s-TAB> :action PreviousTab<CR>
-map <TAB> :action NextTab<CR>
+nnoremap <s-TAB> :action PreviousTab<CR>
+nnoremap <TAB> :action NextTab<CR>
 
 nnoremap Y yg$
 nnoremap n nzzzv
@@ -103,8 +103,8 @@ nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
 xnoremap <leader>p "_dP
 nnoremap ,rw :action ActivateRunToolWindow<CR>
-nnoremap ,rr :action RunMenu<CR>
-nnoremap ,f :action RerunFailedTests<CR>
+nnoremap ,rm :action RunMenu<CR>
+nnoremap ,rrf :action RerunFailedTests<CR>
 map \r :source ~/.ideavimrc<CR>
 
 map <leader>t :action com.sburlyaev.cmd.plugin.actions.OpenTerminal<CR>
@@ -123,3 +123,35 @@ nnoremap gp `[v`]
 let g:highlightedyank_highlight_duration = "100"
 let g:highlightedyank_highlight_color = "rgba(255, 146, 0, 100)"
 
+
+" VIM/IDE OVERRIDES
+
+sethandler <S-Tab> a:vim
+sethandler <C-S-2> a:ide
+sethandler <C-S-6> a:ide
+sethandler <C-;> a:vim
+sethandler <C-S-;> a:vim
+sethandler <C-A> a:vim
+sethandler <C-B> a:vim
+sethandler <C-C> a:vim
+sethandler <C-D> a:vim
+sethandler <C-E> a:vim
+sethandler <C-F> a:vim
+sethandler <C-H> a:vim
+sethandler <C-I> a:vim
+sethandler <C-J> a:vim
+sethandler <C-K> a:ide
+sethandler <C-L> a:vim
+sethandler <C-N> a:vim
+sethandler <C-O> a:vim
+sethandler <C-P> a:vim
+sethandler <A-P> a:ide
+sethandler <C-R> a:vim
+sethandler <C-S> a:vim
+sethandler <C-T> a:vim
+sethandler <C-U> a:vim
+sethandler <C-V> a:vim
+sethandler <C-W> a:vim
+sethandler <C-X> a:vim
+sethandler <C-\> a:ide
+sethandler <C-]> a:vim
