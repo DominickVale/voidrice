@@ -1,6 +1,6 @@
 set path+=**
 let mapleader =" "
-
+let shellcmdflag = "i"
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
 	silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
@@ -76,6 +76,8 @@ Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymot
 
 " Prettier"
 Plug 'sbdchd/neoformat'
+
+" general
 
 call plug#end()
 

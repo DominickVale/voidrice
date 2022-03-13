@@ -78,3 +78,7 @@ alias \
 	wtf="dmesg" \
 	yolo='git commit -m "$(curl -s http://whatthecommit.com/index.txt)"' \
 	gimmeh="touch"
+
+# Wrappers
+alias \
+	lf="lfub" \

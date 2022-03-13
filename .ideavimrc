@@ -104,6 +104,7 @@ nnoremap <leader>zo :action ExpandAllRegions<CR>
 xnoremap <leader>p "_dP
 nnoremap ,rw :action ActivateRunToolWindow<CR>
 nnoremap ,rm :action RunMenu<CR>
+nnoremap ,rc :action ChooseRunConfiguration<CR>
 nnoremap ,rrf :action RerunFailedTests<CR>
 map \r :source ~/.ideavimrc<CR>
 

@@ -103,13 +103,16 @@ require'lspconfig'.tsserver.setup{
   flags = {
       debounce_text_changes = 150,
   },
+  settings = {
+    npmPath = "/home/dominick/.config/nvm/versions/node/v14.18.1/bin/npm"
+  },
 }
--- require'lspconfig'.eslint.setup{config({
---   capabilities = capabilities,
--- })}
--- require'lspconfig'.tailwindcss.setup{config({
---   capabilities = capabilities,
--- })}
+require'lspconfig'.eslint.setup{config({
+  capabilities = capabilities,
+})}
+require'lspconfig'.tailwindcss.setup{config({
+  capabilities = capabilities,
+})}
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.cmake.setup{config({
   capabilities = capabilities,
@@ -167,3 +170,4 @@ require("luasnip.loaders.from_vscode").lazy_load({
     include = nil,  -- Load all languages
     exclude = {}
 })
+
