@@ -189,6 +189,7 @@ lvim.plugins = {
     {"easymotion/vim-easymotion"},
     {"tpope/vim-surround"},
     {"mbbill/undotree"},
+    {"tpope/vim-fugitive"},
 }
 -- lvim.plugins = {
 --     {"folke/tokyonight.nvim"},
