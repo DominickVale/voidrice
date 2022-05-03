@@ -8,6 +8,7 @@ setbg=/home/dominick/.local/bin/setbg
 
 if [ $date -ge 18 ]; then
 	$setbg ~/Pictures/bg/night.jpg -n
+  killall redshift; redshift &
 else
 	$setbg ~/Pictures/bg/day.jpg -n
 fi
