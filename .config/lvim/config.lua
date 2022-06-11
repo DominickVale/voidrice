@@ -16,6 +16,7 @@ lvim.colorscheme = "gruvbox-material"
 vim.cmd([[
   let g:gruvbox_material_palette = 'original'
   let g:gruvbox_material_background = 'hard'
+  let g:gruvbox_material_diagnostic_virtual_text = 'colored'
 ]])
 vim.opt.relativenumber = true
 -- to disable icons and use a minimalist setup, uncomment the following
@@ -40,7 +41,6 @@ vim.cmd([[
 
 -- general
 vim.cmd([[
-	nnoremap <leader>r 
 	map H ^
 	map L $
   map <tab> :BufferLineCycleNext<CR>
@@ -170,20 +170,20 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- end
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
--- local formatters = require "lvim.lsp.null-ls.formatters"
--- formatters.setup {
---   { command = "black", filetypes = { "python" } },
---   { command = "isort", filetypes = { "python" } },
---   {
---     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---     command = "prettier",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--print-with", "100" },
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "typescript", "typescriptreact" },
---   },
--- }
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  -- { command = "black", filetypes = { "python" } },
+  -- { command = "isort", filetypes = { "python" } },
+  {
+    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+    command = "prettierd",
+    ---@usage arguments to pass to the formatter
+    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+    -- extra_args = { "--print-with", "100" },
+    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "css", "json", "yaml" },
+  },
+}
 
 -- -- set additional linters
 -- local linters = require "lvim.lsp.null-ls.linters"
@@ -217,7 +217,7 @@ lvim.plugins = {
     {"tpope/vim-surround"},
     {"mbbill/undotree"},
     {"tpope/vim-fugitive"},
-    { "mg979/vim-visual-multi" },
+    {"mg979/vim-visual-multi"},
 }
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
