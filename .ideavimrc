@@ -19,7 +19,13 @@ set number relativenumber
 set wildmode=longest,list,full
 " Perform dot commands over visual blocks:
 vnoremap . :normal .<CR>
+
+set which-key
+" disable the timeout option
+set notimeout
+
 " Easymotion
+map <leader>w
 map <leader> <Plug>(easymotion-prefix)
 map <leader><leader>. <Plug>(easymotion-repeat)
 map <leader><leader>f <Plug>(easymotion-bd-f)
@@ -36,33 +42,34 @@ let g:NERDTreeMapCloseDir='h'
 " Replace ex mode with gq
 map Q gq
 
-" Replace all is aliased to S.
-map <leader>s :action Replace<CR>
+map s :action Replace<CR>
+map \\A :action SelectAllOccurrences<CR>
 
-" Compile document, be it groff/LaTeX/markdown/etc.
-map <leader>c :w! \| !compiler "<c-r>%"<CR>
-
-map <leader>vd :action GotoDeclaration<CR>
-map <leader>vh :action QuickJavaDoc<CR>
-map <leader>vy :action GotoImplementation<CR>
-map <leader>vj :action QuickTypeDefinition<CR>
-map <leader>vi :action QuickImplementations<CR>
-map <leader>vsd :action ShowErrorDescription<CR>
-map <leader>vca :action ShowIntentionActions<CR>
+map gD :action GotoDeclaration<CR>
+map <leader>lh :action QuickJavaDoc<CR>
+map gI :action GotoImplementation<CR>
+map <leader>lpt :action QuickTypeDefinition<CR>
+map <leader>lpi :action QuickImplementations<CR>
+map gl :action ShowErrorDescription<CR>
+map <leader>ll :action ShowErrorDescription<CR>
+map <leader>la :action ShowIntentionActions<CR>
 map <leader>gw :action ActivateVersionControlToolWindow<CR>
 map <leader>gm :action Git.Menu<CR>
 map <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
-map <leader>vto :action OptimizeImports<CR>
 map <leader>vrn :action RenameElement<CR>
-map <leader><c-f>f :action ReformatCode<CR>
-map <leader><c-f>t :action Javascript.Linters.EsLint.Fix<CR>
-map <leader><c-f>p :action ReformatWithPrettierAction<CR>
+map <leader>lff :action ReformatCode<CR>
+map <leader>lfi :action OptimizeImports<CR>
+map <leader>lft :action Javascript.Linters.EsLint.Fix<CR>
+map <leader>lfp :action ReformatWithPrettierAction<CR>
 map <leader>hl :action LocalHistory.ShowHistory<CR>
 map <leader>r :action Refactorings.QuickListPopupAction<CR>
+map <leader>vs :action FileStructurePopup<CR>
 
 map <c-w>w :action UnsplitAll<CR><esc>
 map <c-w>q :action CloseContent<CR><esc>
+map <leader>c :action CloseContent<CR><esc>
 map <c-w>r :action CloseAllEditorsButActive<CR><esc>
+map `I :action JumpToLastChange<CR>
 map g; :action JumpToLastChange<CR>
 map g, :action JumpToNextChange<CR>
 
@@ -72,7 +79,7 @@ map <leader>a :action Annotate<CR>
 map <c-o> :action Back<CR>
 map <c-i> :action Forward<CR>
 nnoremap c "_c
-map <leader><leader>s :action SaveAll<CR>
+map <leader>w :action SaveAll<CR>
 
 " Jump to start and end of line using the home row keys
 map H ^
