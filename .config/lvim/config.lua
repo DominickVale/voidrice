@@ -61,6 +61,14 @@ vim.cmd([[
   autocmd CursorMoved * call DetectRegChangeAndUpdateMark()
   autocmd InsertLeave * execute 'normal! mM'
 ]])
+
+-- vim-visual-multi
+vim.cmd([[
+  let g:VM_mouse_mappings = 1
+  let g:VM_maps = {}
+  let g:VM_maps['Find Under'] = '<C-N>'
+  let g:VM_maps['Find Subword Under'] = '<C-N>'
+]])
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -209,6 +217,7 @@ lvim.plugins = {
     {"tpope/vim-surround"},
     {"mbbill/undotree"},
     {"tpope/vim-fugitive"},
+    { "mg979/vim-visual-multi" },
 }
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
