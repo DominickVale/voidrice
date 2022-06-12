@@ -69,9 +69,8 @@ map <c-w>w :action UnsplitAll<CR><esc>
 map <c-w>q :action CloseContent<CR><esc>
 map <leader>c :action CloseContent<CR><esc>
 map <c-w>r :action CloseAllEditorsButActive<CR><esc>
-map `I :action JumpToLastChange<CR>
-map g; :action JumpToLastChange<CR>
-map g, :action JumpToNextChange<CR>
+map g; <Action>(JumpToLastChange)
+map g, <Action>(JumpToNextChange)
 
 map <leader>a :action Annotate<CR>
 
