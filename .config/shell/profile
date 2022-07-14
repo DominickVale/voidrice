@@ -2,9 +2,6 @@
 
 # profile file. Runs on login. Environmental variables are set here.
 
-# If you don't plan on reverting to bash, you can remove the link in ~/.profile
-# to clean up.
-
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 #adds ~/.scripts to $PATH
@@ -22,13 +19,14 @@ unsetopt PROMPT_SP
 
 # General:
 export LC_TIME=en_US.utf8
-export GDK_SCALE=1.5
-export GDK_DPI_SCALE=1.1
-export ELM_SCALE=1.5
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
+# export GDK_SCALE=1.5
+# export GDK_DPI_SCALE=1.1
+# export ELM_SCALE=1.5
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export QT_SCALE_FACTOR=1.7
 
 # Default programs:
-export EDITOR="nvim"
+export EDITOR="lvim"
 export TERMINAL="st"
 export TERM_PROGRAM="st"
 export TERM="st"
