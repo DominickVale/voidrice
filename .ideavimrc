@@ -50,6 +50,8 @@ map <leader>lh :action QuickJavaDoc<CR>
 map gI :action GotoImplementation<CR>
 map <leader>lpt :action QuickTypeDefinition<CR>
 map <leader>lpi :action QuickImplementations<CR>
+map <leader>lj :action GotoNextError<CR>
+map <leader>lk :action GotoPreviousError<CR>
 map gl :action ShowErrorDescription<CR>
 map <leader>ll :action ShowErrorDescription<CR>
 map <leader>la :action ShowIntentionActions<CR>
@@ -61,6 +63,8 @@ map <leader>lff :action ReformatCode<CR>
 map <leader>lfi :action OptimizeImports<CR>
 map <leader>lft :action Javascript.Linters.EsLint.Fix<CR>
 map <leader>lfp :action ReformatWithPrettierAction<CR>
+map <leader>st :action FindInPath<CR>
+map <leader>sf :action GotoFile<CR>
 map <leader>hl :action LocalHistory.ShowHistory<CR>
 map <leader>r :action Refactorings.QuickListPopupAction<CR>
 map <leader>vs :action FileStructurePopup<CR>
@@ -75,8 +79,8 @@ map g, <Action>(JumpToNextChange)
 map <leader>a :action Annotate<CR>
 
 " General remaps
-map <c-o> :action Back<CR>
-map <c-i> :action Forward<CR>
+map <c-o> <Action>(Back)
+map <c-i> <Action>(Forward)
 nnoremap c "_c
 map <leader>w :action SaveAll<CR>
 
