@@ -49,7 +49,7 @@ map \\A :action SelectAllOccurrences<CR>
 
 
 " Git
-map <leader>gg :action Git.Menu<CR>
+map <leader>gg :action ActivateVersionControlToolWindow<CR>
 map <leader>gm :action Git.Menu<CR>
 map <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
 map <leader>gk :action VcsShowPrevChangeMarker<CR>
