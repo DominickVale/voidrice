@@ -24,6 +24,8 @@ set which-key
 " disable the timeout option
 set notimeout
 
+noremap gV `[v`]
+
 " Easymotion
 map <leader>w
 map <leader> <Plug>(easymotion-prefix)
@@ -45,19 +47,29 @@ map Q gq
 map s :action Replace<CR>
 map \\A :action SelectAllOccurrences<CR>
 
+
+" Git
+map <leader>gg :action Git.Menu<CR>
+map <leader>gm :action Git.Menu<CR>
+map <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
+map <leader>gk :action VcsShowPrevChangeMarker<CR>
+map <leader>gj :action VcsShowNextChangeMarker<CR>
+map <leader>gw :action ActivateVersionControlToolWindow<CR>
+map <leader>gr :action ActivatePullRequestsToolWindow<CR> 
+map <leader>ga :action Annotate<CR>
+
+ " General
 map gD :action GotoDeclaration<CR>
 map <leader>lh :action QuickJavaDoc<CR>
 map gI :action GotoImplementation<CR>
 map <leader>lpt :action QuickTypeDefinition<CR>
 map <leader>lpi :action QuickImplementations<CR>
+map <leader>lpu :action ShowUsages<CR>
 map <leader>lj :action GotoNextError<CR>
 map <leader>lk :action GotoPreviousError<CR>
 map gl :action ShowErrorDescription<CR>
 map <leader>ll :action ShowErrorDescription<CR>
 map <leader>la :action ShowIntentionActions<CR>
-map <leader>gw :action ActivateVersionControlToolWindow<CR>
-map <leader>gm :action Git.Menu<CR>
-map <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
 map <leader>vrn :action RenameElement<CR>
 map <leader>lff :action ReformatCode<CR>
 map <leader>lfi :action OptimizeImports<CR>
@@ -76,9 +88,6 @@ map <c-w>r :action CloseAllEditorsButActive<CR><esc>
 map g; <Action>(JumpToLastChange)
 map g, <Action>(JumpToNextChange)
 
-map <leader>a :action Annotate<CR>
-
-" General remaps
 map <c-o> <Action>(Back)
 map <c-i> <Action>(Forward)
 nnoremap c "_c
