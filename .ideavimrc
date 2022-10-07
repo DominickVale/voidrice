@@ -125,6 +125,7 @@ nnoremap ,rw :action ActivateRunToolWindow<CR>
 nnoremap ,rm :action RunMenu<CR>
 nnoremap ,rc :action ChooseRunConfiguration<CR>
 nnoremap ,rrf :action RerunFailedTests<CR>
+nnoremap ,rrr :action Rerun<CR>
 map \r :source ~/.ideavimrc<CR>
 
 map <leader>t :action com.sburlyaev.cmd.plugin.actions.OpenTerminal<CR>
