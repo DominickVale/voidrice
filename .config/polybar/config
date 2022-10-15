@@ -70,8 +70,8 @@ font-6 = font awesome 5 free brands regular::pixelsize=10;1
 
 modules-left = dwm
 modules-right = torrents nettraf memory disk battery pulseaudio date xkeyboard temperature cpu-usage cpu-usage-bars
-;modules-right = torrents nettraf weather backlight-acpi memory temperature battery pulseaudio date xkeyboard cpu-usage cpu-usage-bars powermenu
 
+;modules-right = torrents nettraf weather backlight-acpi memory temperature battery pulseaudio date xkeyboard cpu-usage cpu-usage-bars powermenu
 tray-position = right
 tray-padding = 2
 tray-background = #111112
@@ -396,25 +396,25 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-full-prefix = "%{F#ffbb0b} "
 format-full-prefix-foreground = ${colors.foreground-alt}
 
-ramp-capacity-0 = ii
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 = i 
+ramp-capacity-1 =   
+ramp-capacity-2 =   
+ramp-capacity-3 =   
+ramp-capacity-4 =   
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 =   
+animation-charging-1 =   
+animation-charging-2 =   
+animation-charging-3 =   
+animation-charging-4 =   
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-3 = 
-animation-discharging-4 = 
+animation-discharging-0 =   
+animation-discharging-1 =   
+animation-discharging-2 =   
+animation-discharging-3 =   
+animation-discharging-4 =   
 animation-discharging-foreground = $${colors.foreground-alt}
 animation-discharging-framerate = 750
 
@@ -472,7 +472,7 @@ margin-bottom = 0
 [module/date]
 type = custom/script
 exec = sb-clock
-click-left = vivaldi-stable vivaldi://calendar
+click-left = vivaldi-stable vivaldi://calendar/
 click-right = $TERMINAL -e calcurse &
 interval = 10
 
