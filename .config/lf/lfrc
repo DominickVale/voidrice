@@ -269,6 +269,7 @@ map b $setbg $f
 
 map p
 map pp paste
+map pl :paste_link
 
 map m
 map mf mkfile
@@ -279,7 +280,7 @@ map mo chown
 
 map <c-e> down
 map <c-y> up
-map V ${{nohup st nvim</dev/null >/dev/null 2>&1 &}}
+map V ${{nohup st lvim .</dev/null >/dev/null 2>&1 &}}
 map U unselect
 map CC clear
 
@@ -292,6 +293,6 @@ map yc yank-content
 
 map ,
 map , :{{ set nopreview; set ratios 1; }}
-map . :{{ set preview true; set ratios 1:2:3; }}
+map . :{{ set nopreview false; set preview; set ratios 1:2:3; }}
 # Source Bookmarks
 source "~/.config/lf/shortcutrc"
