@@ -60,6 +60,7 @@ vim.cmd([[
   autocmd InsertLeave * execute 'normal! mI'
   autocmd CursorMoved * call DetectRegChangeAndUpdateMark()
   autocmd InsertLeave * execute 'normal! mM'
+  let g:astro_typescript = 'enable'
 ]])
 
 -- vim-visual-multi
@@ -69,6 +70,7 @@ vim.cmd([[
   let g:VM_maps['Find Under'] = '<C-N>'
   let g:VM_maps['Find Subword Under'] = '<C-N>'
 ]])
+
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -212,12 +214,16 @@ formatters.setup {
 --     },
 -- }
 lvim.plugins = {
-    {"sainnhe/gruvbox-material"},
-    {"easymotion/vim-easymotion"},
-    {"tpope/vim-surround"},
-    {"mbbill/undotree"},
-    {"tpope/vim-fugitive"},
-    {"mg979/vim-visual-multi"},
+  { "sainnhe/gruvbox-material" },
+  { "easymotion/vim-easymotion" },
+  { "tpope/vim-surround" },
+  { "mbbill/undotree" },
+  { "tpope/vim-fugitive" },
+  { "mg979/vim-visual-multi" },
+  { "projekt0n/github-nvim-theme" },
+  { "wuelnerdotexe/vim-astro" },
+  { "glacambre/firenvim" },
+  { "github/copilot.vim" },
 }
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
