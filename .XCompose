@@ -9,12 +9,17 @@
 <Multi_key> <m> <e> <t> <a> <l>		: "\m/_(>_<)_\m/"
 <Multi_key> <s> <h> <o> <c> <k>		: "(∩╹□╹∩)"
 <Multi_key> <l> <e> <n> <n> <y>		: "( ͡° ͜ʖ ͡°)"
-<Multi_key> <t> <f> <0> 		: "ಠ_ಠ"
-<Multi_key> <t> <f> <1> 		: "ʕಠಿᴥಠʔ"
-<Multi_key> <t> <f> <2> 		: "ಠᴥಠʔ ಠ_ಠ ᶘಠᴥಠᶅ"
-<Multi_key> <i> <n> <d> 		: "ಠ_ರೃ""
-<Multi_key> <f> <a> <i> <l> 		: "(╥﹏╥)"
+<Multi_key> <t> <f> <0> 		      : "ಠ_ಠ"
+<Multi_key> <t> <f> <1> 		      : "ʕಠಿᴥಠʔ"
+<Multi_key> <t> <f> <2> 		      : "ಠᴥಠʔ ಠ_ಠ ᶘಠᴥಠᶅ"
+<Multi_key> <i> <n> <d> 		      : "ಠ_ರೃ"
+<Multi_key> <f> <a> <i> <l> 		  : "(╥﹏╥)"
+<Multi_key> <c> <r> <y> <1>       : ".·´¯`(>▂<)´¯`·. "
+<Multi_key> <c> <r> <y> <2>       : "( ╥_╥ )"
+<Multi_key> <c> <r> <y> <3>       : " ( ༎ຶ⌑༎ຶ )"
+<Multi_key> <c> <r> <y> <4>       : "(꒦ີΔ꒦ີ )"
 <Multi_key> <p> <o> <i> <n> <t>		: "(☞ﾟヮﾟ)☞"
+<Multi_key> <h> <m> <m>           : "(≖_≖ )"
 
 # general
 <Multi_key> <less> <minus>		: "←"	# LEFTWARDS ARROW
@@ -86,8 +91,6 @@
 <Multi_key> <a> <r> <t> <space>          : "🎨"   # ARTIST PALETTE
 <Multi_key> <w> <o> <l> <f> <space>      : "🐺"   # WOLF FACE
 <Multi_key> <m> <o> <o> <n> <space>      : "🌕"   # FULL MOON SYMBOL
-<Multi_key> <less> <period> <period> <greater> : "💬"    SPEECH BALLOON
-<Multi_key> <e> <y> <e> <s>              : "ಠ_ಠ"
 <Multi_key> <slash> <slash> <space> : "⫽" # DOUBLE SOLIDUS OPERATOR
 <Multi_key> <backslash> <backslash> <space> : "⑊" # OCR DOUBLE BACKSLASH
 <Multi_key> <slash> <period> : "⁄" # FRACTION SLASH
