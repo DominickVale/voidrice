@@ -3,8 +3,7 @@ cac ${XDG_CACHE_HOME:-$HOME/.cache}
 cf  ${XDG_CONFIG_HOME:-$HOME/.config}
 D   ${XDG_DOWNLOAD_DIR:-$HOME/Downloads}
 d   ${XDG_DOCUMENTS_DIR:-$HOME/Documents}
-dt  ${XDG_DATA_HOME:-$HOME/.local/share}
-rr  $HOME/.local/src
+lcs ${XDG_DATA_HOME:-$HOME/.local/share}
 h   $HOME
 mn  /mnt
 pp  ${XDG_PICTURES_DIR:-$HOME/Pictures}
